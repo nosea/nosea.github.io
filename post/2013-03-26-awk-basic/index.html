@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Awk 基础 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction Awk 基础知识  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-03-26-awk-basic/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Awk 基础" />
+<meta property="og:description" content="Introduction
+
+Awk 基础知识
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-03-26-awk-basic/" />
+
+
+
+<meta property="article:published_time" content="2013-03-26T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-03-26T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Awk 基础">
+<meta itemprop="description" content="Introduction
+
+Awk 基础知识
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-03-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-03-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2830">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Awk 基础"/>
+<meta name="twitter:description" content="Introduction
+
+Awk 基础知识
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Awk 基础</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-03-26 </span>
+        <div class="post-category">
+            
+              <a href="/categories/awk/"> Awk </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#基础知识">基础知识</a>
+<ul>
+<li><a href="#两个基本概念">两个基本概念</a></li>
+<li><a href="#常用options">常用Options</a></li>
+<li><a href="#常量">常量</a></li>
+<li><a href="#pattern-action">Pattern，Action</a></li>
+<li><a href="#流程控制">流程控制</a></li>
+<li><a href="#i-o控制">I/O控制</a></li>
+<li><a href="#built-in-function">BUILT-IN FUNCTION</a></li>
+<li><a href="#regular-expressions">Regular Expressions</a></li>
+<li><a href="#备忘">备忘</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>Awk 基础知识
+</code></pre>
+
+<p></p>
+
+<h1 id="基础知识">基础知识</h1>
+
+<h2 id="两个基本概念">两个基本概念</h2>
+
+<pre><code>1.记录(record): 一般而言，一个数据行就相当于文件上的一行
+2.字段(Field): 为数据行上被分隔开来的子字符串
+3.两种执行方式:
+  I. $awk 'awk程序' filename
+  II. $awk -f somefile.awk filename
+4.
+  $0 ——  awk所读入的数据行，为一整行字符串
+  $1 —— $0 上第一个字段的数据
+  $2 —— $0 上第二个字段的数据
+  ......
+</code></pre>
+
+<h2 id="常用options">常用Options</h2>
+
+<pre><code>-F fs
+    &lt;=&gt; FS
+-v var=val
+    --通常在BEGIN块中设置此类变量
+-f program-file   
+</code></pre>
+
+<h2 id="常量">常量</h2>
+
+<pre><code>ARGC        命令行参数个数
+ARGV        命令行参数数组
+FILENAME    当前输入文件名
+NF          当前行field个数
+NR          总的record数
+FNR         当前文件record数
+FS          输入field分隔符
+OFS         输出record分隔符
+RS          输入record分隔符
+ORS         输出record分隔符
+--------------------------------------------------
+FS -- 输入field分隔符，默认是space
+   -- FS也可以用正则表达式
+   -- 当FS为空时
+OFS -- 输出field分隔符，默认space
+  [nosea@nosea test]$ awk -v OFS=&quot;|&quot; '{print $0}' to.txt 
+  111 222
+  333 444
+  555 666
+  [nosea@nosea test]$ awk -v OFS=&quot;|&quot; '{print $1,$2}' to.txt 
+  111|222
+  333|444
+  555|666
+RS -- 输入record分隔符，默认newline
+   -- 也可能是正则表达式
+RT -- 当RS为固定值，RT就是RS的值，
+  eg:echo '111 222|333 444|555 666' | awk -v RS='|' '{print $0, RT}'
+  111 222 |
+  333 444 |
+  555 666
+  -- 当RS为正则表达式时，RT就是匹配出来的值
+  eg:echo '111 222a333 444b555 666' | awk -v RS='[a-z]' '{print $0, RT}' 
+  111 222 a
+  333 444 b
+  555 666
+  -- 当RS为空时，即RS=&quot;&quot;时，awk会把空白行当成文件中的record分隔符
+ORS -- 输出record分隔符，默认newline
+  echo '111 222|333 444|555 666' | awk -v RS='|' -v ORS='@' '{print $0}' 
+  111 222@333 444@555 666
+  @[nosea@nosea test]$   -- 注意此处有一个@，会多打一个空行！！
+</code></pre>
+
+<h2 id="pattern-action">Pattern，Action</h2>
+
+<pre><code>BEGIN{ action }
+    BEGIN为true的时候 -- 程序开始执行，尚未读取任何数据之前
+    一般将 &quot;与数据内容无关&quot; 和 &quot;只需执行一次&quot; 的部分放置在这里
+    注:
+      执行只含BEGIN{ action }的程序时，awk不会进行任何数据文件处理
+
+END{ action }
+    END为true的时候 -- 程序处理完所有的数据，即将离开程序的时候
+
+/regular expression/{ action }
+  String Match Pattern
+  /regexpr/  &lt;=&gt;  $0 /regexpr/
+  expression ～ /regexpr/
+  expression !~ /regexpr/
+
+relational expression{ action }
+    &gt;  &lt;  &gt;=  &lt;= == !=  ~   !~
+
+Compound pattern{ action }
+    &amp;&amp;   ||  !
+
+pattern ? pattern : pattern{ action }
+
+pattern1, pattern2{ action }
+    当pattern1成立时，switch打开
+    当pattern2成立时，switch关闭
+    如果两个pattern在同一行都满足，那么swtich在一行里打开后马上关闭
+        如果接下来的行里有满足pattern1的，switch才会打开
+</code></pre>
+
+<h2 id="流程控制">流程控制</h2>
+
+<pre><code>if、for、while与c语言类似
+next:
+    执行next时，awk会忽略next后的所有指令，接着读取下一笔数据，继续从第一个
+    pattern { Action }执行
+exit:
+    执行exit时，awk立刻退出程序
+自定义函数
+function name(parameter-list) {
+    statements
+}
+</code></pre>
+
+<h2 id="i-o控制">I/O控制</h2>
+
+<pre><code>打印输出
+    print  ---  注意这个会自动添加换行符
+    printf ---  类似C语言，记住这个不自动加换行符
+    print 和 printf之后可以用 &quot;&gt;&quot; 或者 &quot;&gt;&gt;&quot; 重定向到数据文件
+    eg: print &quot;data to print&quot; &gt; &quot;data.txt&quot;
+getline
+    getline var &lt; file  —— 由file读数据，存储在var中
+    getline var         —— 由pipe读数据，存储在var中
+    getline var         —— 当Pattern为BEGIN或END时，getline将由stdin读取数据，
+                           否则由awk正在处理的数据文件上读取数据
+    getline一次读取一行数据，若读取成功则返回1，失败为-1，遇到文件结束则为0
+
+awk借助管道与shell命令交互
+awk可接受下列两种语法:
+  1、awk output command | &quot;shell command&quot;
+     这里awk输出的数据会交给shell命令处理
+  2、&quot;shell command&quot; | awk input command
+     这里shell命令的输出将会交给awk处理
+  ——注
+     awk input指令只有getline 一个
+     awk output指令有 print，printf()两个
+</code></pre>
+
+<h2 id="built-in-function">BUILT-IN FUNCTION</h2>
+
+<pre><code>1.index(str, b)
+  若b在str中存在，返回其首次出现位置，否则返回0
+
+2.length(str)
+  返回str的长度
+  # 如果要计算一个行的长度，即length($0)的时候，记得 nc=length($0)+1, “+1”是因为还有newline
+
+3.match(str, regxp)
+  寻找在str中匹配regxp表达式的子串，若有多个符合，则以最左方为准
+  RSTART = 满足条件的子串在原串中的位置
+  RLENGTH = 满足条件的子串的长度
+
+4.split(str, arr, s)
+  awk会根据分隔符s将str分割成一个个field然后以数组arr记录每个field
+
+5.sprintf(str, opt1, opt2)
+  功能与printf相同，不同是将打印的结果当成一个字符串返回而不是打印到屏幕
+
+5.sub(regexp, rstr, sourcestr)
+  sub()将原字符串中第一个合乎指定的regexp的子串用rstr替代
+  通过sub()与match()的搭配使用，可逐次取出原串中合乎指定条件的所有子串
+
+6.gsub(regexp, rstr, sourcestr)
+  功能和sub一样，区别是：
+  gsub()会取代所有满足条件的的子串
+  gsub()会返回被替换子串的个数
+
+7.substr(str, begin, len)
+  返回从begin位置起，指定len长度的子串，若未指定len，返回整个str
+</code></pre>
+
+<h2 id="regular-expressions">Regular Expressions</h2>
+
+<pre><code>1、metacharacters
+  \ ^ $ . [ ] | ( ) * + ?
+
+  ^        match开头
+  $        match尾部
+  .        match任何单个字符
+  [abc]    match字符a，b，c中的任何一个
+           注意: 在[]里的字符，除了&quot;\&quot;, 开头的&quot;^&quot;，以及两个字符间的&quot;-&quot;
+           都代表其字符意义，即[.]就匹配一个&quot;.&quot;，而不是任意单个字符
+           hyphen: &quot;-&quot;, 仅在两边都有字符的时候，才代表连续字符集的简写，否则就是其字面意思
+  combine
+  A|B      match A或者B
+  AB       match A紧接着是B
+  A*       0个或多个A
+  A+       1一个多个A
+  A？      null string 或者 A, 即要么没有，要么只有一个
+  (r)      等同表达式r， 好处是可以对整个()里的内容用*, + 等之类的
+           (r1)(r2)匹配xy，其中x match r1， y match r2
+
+  匹配确定个数
+  $ echo &quot;aaaaaa|aa dd|dd aaaa&quot; | awk -v RS=&quot;|&quot; --posix '/a{6}/{print NR, $0}'
+  1 aaaaaa
+
+  ~        匹配
+  !~       不匹配
+  如果不小心写成了 ~!  
+  比如 $0~!/re/, 那么只有可能是$0 ~ 1, 或者 $0 ~ 0, 但是0还是1由/re/来确定
+2.例子
+  /^[0-9]+$/
+      匹配只含有数字的行
+  /^[0-9][0-9][0-9]$/
+      匹配只有三个数字的行
+  /^(\+|-)?[0-9]+\.?[0-9]*$/
+      匹配带可选正负号的十进制数
+  /^[+-]?[0-9][.]?[0-9]*$/
+      同上一条
+  /^[A-Za-z][A-Za-z0-9]*$/   # 在ASCII中，a &gt; A
+      匹配一个字母后面接一个字母或者数字或者不接
+</code></pre>
+
+<h2 id="备忘">备忘</h2>
+
+<pre><code>1.在使用print打印的时候，用逗号分隔，默认打印出来是被空格分隔
+  eg:
+  awk '{print $1, $3}' log.data  # 如果不加逗号，就连在一起
+  tomy 2
+  simy 2
+2.$ 之后是可以跟表达式的
+  eg: 打印第一个field 和最后一个field
+  awk '{print $1, $NF}'
+3.A missing pattern matches every input line
+  A pattern-action consisting only a pattern prints each input line
+  matched by pattern.
+  print本身代表打印当前行
+  { print } &lt;=&gt; { print $0 }
+4.因为action和pattern都是可选的，所以actions要放在{}里以区别pattern
+5.BEGIN match的是before the first line of first file is read
+  END match的是after the last line of last file  has been processed
+6.分号&quot;;&quot; 和 newline 都可以分割statement
+7.awk的变量无需初始化，初次用值为0或null string
+8.字符串连接
+  name = name $1 &quot; &quot;
+9.pattern和&quot;{&quot; 必须紧挨
+10.长语句可以用backslash&quot;\&quot;分隔多行
+11.在BEGIN和END里，没有NR，但有NF，$0, $1....(如果指定了$0)
+12.sub只替换满足条件的第一个，gsub是替换一行里所有满足条件的
+13.字符串作为正则表达式
+    BEGIN {digits = &quot;^[0-9]+$&quot;}
+    $2 ~ digits
+14.注意以下的区别
+   $0 ~ /(\+|-)[0-9]+/
+   and
+   $0 ~ &quot;(\\+|-)[0-9]+&quot;
+15.gsub(/a/, &quot;&amp;b&amp;&quot;, &quot;banana&quot;)   # 把每个a替换成aba
+16.exit如果后面没有跟退出状态，那么退出状态是0
+17.string作为regexp
+   BEGIN {digit = &quot;^[0-9]+$&quot;}
+   $1 ~ digit
+   NOTE：
+     &quot;^[0-9]+$&quot; &lt;=&gt; /^[0-9]+$/
+     &quot;(\\+|-)][0-9]+&quot;  &lt;=&gt;  /(\+|-)[0-9]+/
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p>Awk 手册<br />
+The Awk Programming Language<br />
+Thanks!</p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-03-26</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-03-26-awk-skills/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Awk Skills</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-03-25-emacs-summary/">
+            <span class="next-text nav-default">emacs summary</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

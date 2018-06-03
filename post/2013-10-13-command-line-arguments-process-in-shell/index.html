@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Shell 命令行参数解析 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction  命令行参数的处理是最常用的需求，主要处理长选项和短选项 目前常用的是getopt和getopts  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-10-13-command-line-arguments-process-in-shell/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Shell 命令行参数解析" />
+<meta property="og:description" content="Introduction
+
+    命令行参数的处理是最常用的需求，主要处理长选项和短选项
+目前常用的是getopt和getopts
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-10-13-command-line-arguments-process-in-shell/" />
+
+
+
+<meta property="article:published_time" content="2013-10-13T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-10-13T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Shell 命令行参数解析">
+<meta itemprop="description" content="Introduction
+
+    命令行参数的处理是最常用的需求，主要处理长选项和短选项
+目前常用的是getopt和getopts
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-10-13T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-10-13T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="948">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Shell 命令行参数解析"/>
+<meta name="twitter:description" content="Introduction
+
+    命令行参数的处理是最常用的需求，主要处理长选项和短选项
+目前常用的是getopt和getopts
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Shell 命令行参数解析</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-10-13 </span>
+        <div class="post-category">
+            
+              <a href="/categories/shell/"> Shell </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#getopt">getopt</a></li>
+<li><a href="#note-the-quotes-around-temp-they-are-essential">Note the quotes around `$TEMP&rsquo;: they are essential!</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>    命令行参数的处理是最常用的需求，主要处理长选项和短选项
+目前常用的是getopt和getopts
+</code></pre>
+
+<p></p>
+
+<h1 id="getopt">getopt</h1>
+
+<p>``` bash getopt的使用
+#!/bin/bash
+:&lt;&lt;EOF
+ $ type getopt
+ getopt is /usr/bin/getopt
+ ## 通过下面的可以看出getopt是外部命令</p>
+
+<p>使用:
+   getopt optstring parameters
+   optstring:
+   -o 后跟单个字符的短选项，如-o ab:c::
+      单个字符，表示选项
+      1 后跟一个冒号，表示后面必须紧跟一个参数，选项后或者
+        以空格隔开
+      2 后跟两个冒号，表示后面必须跟一个参数，且不能以空格隔开
+      ############# 在我测试的情况中发现，两个冒号如果没有带参数，并不会报错
+      ############# 但是单个冒号的情况会报错</p>
+
+<p>&ndash;long 后跟长选项，如&ndash;long a-long,b-long:,c-long::
+      冒号的说明跟短选项一致
+   -n 出错时的信息
+   &ndash; 作用是让后面的不被解释成选项，因为&rdquo;$@&ldquo;带有&rsquo;-&lsquo;等参数
+      eg: 比如想touch一个名为“-x”的文件
+         touch -x  ## 这样会出现：touch: invalid option &ndash; &lsquo;x&rsquo;，因为解释成选项了
+         touch &ndash; -x ## 这样就可以了
+         当然，删除也是：rm &ndash; -x
+ ## 下面的例子参照了/usr/share/doc/util-linux/examples/getopt-parse.bash
+EOF</p>
+
+<p>TEMP=$(getopt -o ab:c:: &ndash;long along,blong:,clong:: -n &lsquo;Error:&rsquo; &ndash; &ldquo;$@&rdquo;)</p>
+
+<p>if [ $? != 0 ]; then
+    exit 1
+fi</p>
+
+<h1 id="note-the-quotes-around-temp-they-are-essential">Note the quotes around `$TEMP&rsquo;: they are essential!</h1>
+
+<p>eval set &ndash; &ldquo;$TEMP&rdquo;</p>
+
+<p>while true
+do
+    case &ldquo;$1&rdquo; in
+    -a|&ndash;along)
+        echo &ldquo;Option a:&rdquo;
+        shift
+        ;;
+    -b|&ndash;blong)
+        echo &ldquo;Option b: Argument is: $2&rdquo;
+        shift 2
+        ;;
+    -c|&ndash;clong)
+        echo &ldquo;Option c: argument is: $2&rdquo;
+        shift 2
+        ;;
+    &ndash;)
+        shift
+        break
+        ;;
+    *)
+        echo &ldquo;Internal error!&rdquo;
+        exit 1
+    esac
+done</p>
+
+<p>echo &ldquo;Remaining arguments:&rdquo;
+for arg
+do
+    echo &lsquo;&ndash;&gt; &lsquo;&rdquo;`$arg&rsquo;&rdquo;
+done</p>
+
+<pre><code># getopts
+``` bash getopts使用示例
+#!/bin/bash
+:&lt;&lt;EOF
+  $ type getopts
+  getopts is a shell builtin
+  ## 从上面可以看出getopts是shell内置的
+  getopts只能处理短选项，使用相对getopt简单点,我把s看成simple
+
+  OPTIND:
+    变量存储$*中下一个要处理的位置，对于没有参数的选项，getopts
+将OPTIND加1，对于有参数的选项，将OPTIND加2
+
+  OPTARG:
+    变量存储选项的参数值
+  eg:
+  -a -b s arg1
+  $#值为4，当
+
+  当getopts遇到一个非选项参数时，会将OPTINT设置为
+这个参数的索引，并且停止解析
+EOF
+
+declare -a NOA ## 声明一个数组，用来存储非选项参数
+
+while [ $# -ne 0 ]
+do
+   OPTIND=0 # 索引为0
+
+   ## 处理选项参数
+   while getopts &quot;🔤d::&quot; opt
+   do
+       case $opt in
+	a)
+	    echo &quot;Option a&quot;
+	    ;;
+   	b)
+   	    echo &quot;Option b&quot;
+   	    ;;	   
+   	c)
+   	    echo &quot;Option c: Argument is: $OPTARG&quot;
+   	    ;;
+   	d)
+   	    echo &quot;Option d: Argument is: $OPTARG&quot;
+   	    ;;
+   	\?)
+   	    echo &quot;Invalid option: -$OPTARG&quot; &gt;&amp;2
+   	    exit 1
+   	    ;;
+   	:)
+   	    echo &quot;Option: -$OPTARG requires an argument.&quot; &gt;&amp;2
+   	    exit 1
+   	    ;;
+       esac
+   done
+
+   ## 处理非选项参数
+   if [ $OPTIND -ne $(($#+1)) ]
+   then
+       shift $(($OPTIND-1)) ## 把前面的都去掉
+       ## 把参数加入数组
+       NOA=(`echo ${NOA[*]}` $1)
+       shift
+   else
+       break; 
+   fi  
+done
+
+echo &quot;Remaining arguments:&quot;
+for arg in ${NOA[*]}
+do
+	echo '--&gt;' &quot;${arg}&quot;
+done
+
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://www.cnblogs.com/FrankTan/archive/2010/03/01/1634516.html">Bash Shell中命令行选项/参数处理</a><br />
+Thanks!</p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-10-13</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-10-14-shell-conditional-expression/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">shell 条件表达式</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-10-12-shell-multiprocess/">
+            <span class="next-text nav-default">Shell 多进程</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

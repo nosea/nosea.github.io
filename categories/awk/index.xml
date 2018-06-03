@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Awk on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/awk/</link>
+    <description>Recent content in Awk on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 24 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/awk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>awk常用函数</title>
+      <link>http://localhost:1313/post/2013-11-24-awk-funclib/</link>
+      <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-11-24-awk-funclib/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;收集些我觉得有用的函数
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Awk Skills</title>
+      <link>http://localhost:1313/post/2013-03-26-awk-skills/</link>
+      <pubDate>Tue, 26 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-26-awk-skills/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Awk 常用技巧
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Awk 基础</title>
+      <link>http://localhost:1313/post/2013-03-26-awk-basic/</link>
+      <pubDate>Tue, 26 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-26-awk-basic/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Awk 基础知识
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>mysql statistical analysis exercise - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction MySQL查询练习题  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-04-17-mysql-statistical-analysis-exercise/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="mysql statistical analysis exercise" />
+<meta property="og:description" content="Introduction
+
+MySQL查询练习题
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-04-17-mysql-statistical-analysis-exercise/" />
+
+
+
+<meta property="article:published_time" content="2013-04-17T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-04-17T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="mysql statistical analysis exercise">
+<meta itemprop="description" content="Introduction
+
+MySQL查询练习题
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-04-17T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-04-17T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1422">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="mysql statistical analysis exercise"/>
+<meta name="twitter:description" content="Introduction
+
+MySQL查询练习题
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">mysql statistical analysis exercise</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-04-17 </span>
+        <div class="post-category">
+            
+              <a href="/categories/mysql/"> MySQL </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#content">Content</a>
+<ul>
+<li><a href="#第一题">第一题</a></li>
+<li><a href="#第一题数据">第一题数据</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>MySQL查询练习题
+</code></pre>
+
+<p></p>
+
+<h1 id="content">Content</h1>
+
+<h2 id="第一题">第一题</h2>
+
+<pre><code>I:环境准备
+  $ mysql -h localhost -u root -p
+
+  mysql&gt; CREATE DATABASE learn DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+  Query OK, 1 row affected (0.00 sec)
+
+  mysql&gt; grant all privileges on learn.* to 'tiger'@'localhost' 
+      -&gt; identified by '123456' with grant option;
+  Query OK, 0 rows affected (0.00 sec)
+
+  mysql&gt; select * from mysql.user \G;
+
+  mysql&gt; flush privileges;
+  Query OK, 0 rows affected (0.00 sec)
+
+  $ mysql -u tiger -p
+
+  mysql&gt; show databases;
+  +--------------------+
+  | Database           |
+  +--------------------+
+  | information_schema |
+  | learn              |
+  | test               |
+  +--------------------+
+  3 rows in set (0.00 sec)
+
+  mysql&gt; use learn;
+  Database changed
+  mysql&gt; show tables;
+  Empty set (0.00 sec)
+
+  mysql&gt; create table event(
+      -&gt; event_time date,
+      -&gt; type int(11),
+    -&gt; uid int(11),
+    -&gt; score int(11));
+  Query OK, 0 rows affected (0.19 sec)
+
+  mysql&gt; show tables;
+  +-----------------+
+  | Tables_in_learn |
+  +-----------------+
+  | event           |
+  +-----------------+
+  1 row in set (0.01 sec)
+
+  mysql&gt; load data local infile 'data1.txt' into table event;
+  ERROR 1148 (42000): The used command is not allowed with this MySQL version
+
+  $ mysql -u tiger -p --local-infile=1
+
+  mysql&gt; load data local infile 'data1.txt' into table event;
+  Query OK, 30 rows affected (0.08 sec)
+  Records: 30  Deleted: 0  Skipped: 0  Warnings: 0
+
+  mysql&gt; select * from event limit 3;
+  +------------+------+------+-------+
+  | event_time | type | uid  | score |
+  +------------+------+------+-------+
+  | 2013-04-01 |    1 | 2344 |    34 |
+  | 2013-04-02 |    2 | 2122 |    21 |
+  | 2013-04-03 |    3 | 6744 |     9 |
+  +------------+------+------+-------+
+  3 rows in set (0.00 sec)
+
+  mysql&gt; create table work(test_time date, test_type int(11), uid int(11));
+  Query OK, 0 rows affected (0.16 sec)
+
+  mysql&gt; load data local infile 'data2.txt' into table work;
+  Query OK, 35 rows affected (0.08 sec)
+  Records: 35  Deleted: 0  Skipped: 0  Warnings: 0
+
+  mysql&gt; select * from work limit 3;
+  +------------+-----------+------+
+  | test_time  | test_type | uid  |
+  +------------+-----------+------+
+  | 2013-04-01 |        12 | 2344 |
+  | 2014-04-01 |        13 | 2122 |
+  | 2014-04-02 |        14 | 6744 |
+  +------------+-----------+------+
+  3 rows in set (0.00 sec)
+
+
+II:说明
+  event表里存放事件发生时间， 发生的种类，user的id，以及user的分数
+  work表里存放测试时间，测试类型的编号，user的id
+  题目: 
+    1.在event表里找出4月4号到4月29号的user，统计他们发生event的次数以及总的分数(score),和
+    socre的最大值
+
+    mysql&gt; select uid as '用户', count(*) as '事件发生次数',
+        -&gt; sum(score) as '总成绩', max(score) as '最高分'
+        -&gt; from event where event_time &gt;= '2013-04-04' &amp;&amp;
+        -&gt; event_time &lt;= '2013-04-29' group by uid;
+    +--------+--------------------+-----------+-----------+
+    | 用户   | 事件发生次数       | 总成绩    | 最高分    |
+    +--------+--------------------+-----------+-----------+
+    |   2122 |                  3 |        44 |        23 |
+    |   2123 |                  1 |        23 |        23 |
+    |   2134 |                  1 |        45 |        45 |
+    |   2189 |                  2 |       159 |        87 |
+    |   2342 |                  1 |        24 |        24 |
+    |   2344 |                  5 |        84 |        34 |
+    |   3111 |                  1 |        23 |        23 |
+    |   3211 |                  2 |       281 |       272 |
+    |   3232 |                  1 |        76 |        76 |
+    |   3412 |                  1 |        21 |        21 |
+    |   3444 |                  1 |        32 |        32 |
+    |   4522 |                  3 |        75 |        45 |
+    |   5422 |                  1 |        65 |        65 |
+    |   6522 |                  1 |        76 |        76 |
+    |   6744 |                  2 |        24 |        22 |
+    +--------+--------------------+-----------+-----------+
+    15 rows in set (0.00 sec)
+
+  2.在event表里找出4月4号到4月29号的user，统计他们发生event的次数以及总的分数(score),和
+    socre的最大值，以及这个user在work表里这段时间参加test为11，12的次数
+
+
+    mysql&gt; select event.uid as '用户', count(*) as '事件发生次数', 
+        -&gt; sum(event.score) as '总成绩', max(event.score) as '最高分', 
+        -&gt; count(case when  work.test_type = 11 then 1 else NULL end) as 'TEST11次数', 
+        -&gt; count(case when work.test_type = 12 then 1 else NULL end) as 'TEST12次数'  
+        -&gt; from event left join work on event.uid = work.uid where 
+        -&gt; event.event_time &gt;= '2013-04-04' &amp;&amp; event.event_time &lt;= '2013-04-29' 
+        -&gt; group by event.uid;
+    +--------+--------------------+-----------+-----------+--------------+--------------+
+    | 用户   | 事件发生次数       | 总成绩    | 最高分    | TEST11次数   | TEST12次数   |
+    +--------+--------------------+-----------+-----------+--------------+--------------+
+    |   2122 |                  9 |       132 |        23 |            0 |            0 |
+    |   2123 |                  1 |        23 |        23 |            0 |            1 |
+    |   2134 |                  1 |        45 |        45 |            0 |            1 |
+    |   2189 |                  4 |       318 |        87 |            0 |            2 |
+    |   2342 |                  1 |        24 |        24 |            0 |            1 |
+    |   2344 |                 25 |       420 |        34 |            5 |            5 |
+    |   3111 |                  1 |        23 |        23 |            0 |            0 |
+    |   3211 |                  2 |       281 |       272 |            0 |            0 |
+    |   3232 |                  1 |        76 |        76 |            0 |            0 |
+    |   3412 |                  1 |        21 |        21 |            0 |            0 |
+    |   3444 |                  1 |        32 |        32 |            0 |            0 |
+    |   4522 |                  9 |       225 |        45 |            0 |            3 |
+    |   5422 |                  1 |        65 |        65 |            0 |            0 |
+    |   6522 |                  1 |        76 |        76 |            0 |            1 |
+    |   6744 |                  4 |        48 |        22 |            0 |            0 |
+    +--------+--------------------+-----------+-----------+--------------+--------------+
+    15 rows in set (0.00 sec)
+</code></pre>
+
+<h2 id="第一题数据">第一题数据</h2>
+
+<pre><code>#===========data2.txt========       ===============data1.txt=========
+2013-04-01      12      2344   |    2013-04-01      1       2344    34
+2014-04-01      13      2122   |    2013-04-02      2       2122    21
+2014-04-02      14      6744   |    2013-04-03      3       6744    09
+2014-04-02      14      2344   |    2013-04-04      2       2344    11
+2014-04-03      15      3214   |    2013-04-05      2       3211    9
+2014-04-03      12      2384   |    2013-04-06      3       2344    7
+2014-04-03      15      6744   |    2013-04-07      2       6744    2
+2014-04-06      16      2142   |    2013-04-08      1       2122    4
+2014-04-09      18      2344   |    2013-04-09      4       2344    10
+2014-04-11      15      4522   |    2013-04-10      5       4522    12
+2014-04-11      13      2122   |    2013-04-11      1       2122    17
+2014-04-14      12      4522   |    2013-04-12      3       4522    18
+2014-04-15      11      2344   |    2013-04-13      2       2344    34
+2014-04-18      12      6774   |    2013-04-14      1       6744    22
+2014-04-18      12      2189   |    2013-04-15      5       2189    87
+2014-04-19      14      5422   |    2013-04-16      3       5422    65
+2014-04-19      16      4522   |    2013-04-17      4       4522    45
+2014-04-22      17      2189   |    2013-04-18      1       2189    72
+2014-04-24      13      3211   |    2013-04-19      2       3211    272
+2014-04-24      12      2134   |    2013-04-20      3       2134    45
+2014-04-25      16      2344   |    2013-04-21      8       2344    22
+2014-04-25      18      3111   |    2013-04-22      9       3111    23
+2014-04-28      15      3432   |    2013-04-23      6       3232    76
+2014-04-28      13      3412   |    2013-04-24      1       3412    21
+2014-04-29      12      2123   |    2013-04-25      4       2123    23
+2014-04-30      14      2122   |    2013-04-26      5       2122    23
+2014-04-30      12      6522   |    2013-04-27      6       6522    76
+2014-04-30      16      2242   |    2013-04-28      3       2342    24
+2014-04-30      17      3444   |    2013-04-29      5       3444    32
+2014-05-01      12      2342   |    2013-04-30      2       2342    23
+2014-05-02      14      4834   |
+2014-05-02      18      8379   |
+2014-05-03      13      8373   |
+2014-05-04      19      2277   |
+2014-05-04      16      8631   |
+</code></pre>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-04-17</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-05-08-linux-command-cut/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Linux命令之cut</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-04-14-use-of-securecrt/">
+            <span class="next-text nav-default">Use Of SecureCRT</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>linux命令tcpdump - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction tcpdump命令日常使用  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2015-01-06-linux-command-tcpdump/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="linux命令tcpdump" />
+<meta property="og:description" content="Introduction
+
+tcpdump命令日常使用
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2015-01-06-linux-command-tcpdump/" />
+
+
+
+<meta property="article:published_time" content="2015-01-06T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-01-06T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="linux命令tcpdump">
+<meta itemprop="description" content="Introduction
+
+tcpdump命令日常使用
+
+
+">
+
+
+<meta itemprop="datePublished" content="2015-01-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2015-01-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1609">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="linux命令tcpdump"/>
+<meta name="twitter:description" content="Introduction
+
+tcpdump命令日常使用
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">linux命令tcpdump</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-01-06 </span>
+        <div class="post-category">
+            
+              <a href="/categories/linux/"> Linux </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#option">OPTION</a></li>
+<li><a href="#expression">expression</a>
+<ul>
+<li><a href="#qualifiers">qualifiers</a>
+<ul>
+<li><a href="#type">type</a></li>
+<li><a href="#dir">dir</a></li>
+<li><a href="#proto">proto</a></li>
+<li><a href="#其他常用的">其他常用的</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>tcpdump命令日常使用
+</code></pre>
+
+<p></p>
+
+<h1 id="option">OPTION</h1>
+
+<pre><code>-i     Listen on interface.
+$ sudo tcpdump -ieth0  // 监听eth0上所有的包
+22:26:20.775096 IP NOSEA-PC.1600 &gt; 192.168.14.16.41732: . ack 98 win 271 ...省略
+
+-c     Exit after receiving count packets.
+
+$ sudo tcpdump -ieth0 -c 10   // 监听eth0上收到的10个包
+22:26:20.775096 IP NOSEA-PC.1600 &gt; 192.168.14.16.41732: . ack 98 win 271 ...省略
+下面只显示抓到的10个包
+
+-n     Don't  convert  addresses  (i.e.,  host addresses, port numbers,
+       etc.) to names.
+       如果不使用-n选项，那么ip会被转变为主机名，端口会被转为相应的服务，如port 22
+       会被转换为ftp。
+$ sudo tcpdump -ieth0 -c 10   
+22:26:20.775096 IP NOSEA-PC.1600 &gt; 192.168.14.16.41732: . ack 98 win 271 ...省略
+
+$ sudo tcpdump -ieth0  -n -c 10   // 不要把地址转换为主机名，不要把端口转换为服务名
+22:26:20.775096 IP 192.168.14.17.1600 &gt; 192.168.14.16.41732: . ack 98 win 271 ...省略
+
+-X     When parsing and printing, in addition to printing  the  headers
+       of  each  packet,  print the data of each packet (minus its link
+       level header)  in  hex  and  ASCII.   This  is  very  handy  for
+       analysing new protocols.
+       打印了包头和包得内容，对于协议的分析很有用。
+$ sudo tcpdump -ieth0 -X -n -c 10
+
+-e     Print  the  link-level  header  on  each dump line.  This can be
+       used, for example, to print MAC layer  addresses  for  protocols
+       such as Ethernet and IEEE 802.11.
+       之前是只有IP的信息，这个会打印链路层的信息，对于查看mac地址挺有用
+$ sudo tcpdump -ieth0 -enX -c10
+
+-l     Make stdout line buffered.  Useful if you want to see  the  data
+       while capturing it. 
+       让标准输出行缓冲后，可以用pipe针对每行做处理，在想实时的看到dump到
+       packet时很有用。比如
+       tcpdump -l | tee dat
+       tcpdump -l &gt; dat &amp; tail -f data
+$ sudo tcpdump -ieth0 -enX -c10
+
+-v     When  parsing and printing, produce (slightly more) verbose out-
+       put.  For example,  the  time  to  live,  identification,  total
+       length  and  options  in an IP packet are printed.  Also enables
+       additional packet integrity checks such as verifying the IP  and
+       ICMP header checksum.
+       -v和-vv都是打印更多的详细的信息，需要时再用吧
+$ sudo tcpdump -ieth0 -enX -c10
+
+-w     Write  the  raw packets to file rather than parsing and printing
+       them out.  They can later be printed with the -r option.   Stan-
+       dard output is used if file is ``-''.
+
+       This  output will be buffered if written to a file or pipe, so a
+       program reading from the file or pipe may not see packets for an
+       arbitrary  amount  of  time after they are received.  Use the -U
+       flag to cause  packets  to  be  written  as  soon  as  they  are
+       received.
+       注意，保存到文件里的是raw packets是原始的dump数据，没有经过分析的
+       二进制数据。如果要读这些包文件的话，用-r选项。另外，即使在保存到
+       文件的时候，用了一些匹配选项，保存的也是最原始的日志.
+$ sudo tcpdump -ieth0  -c10 -w dump.data
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes
+10 packets captured
+22 packets received by filter
+0 packets dropped by kernel
+
+-r     Read  packets  from file (which was created with the -w option).
+       Standard input is used if file is ``-''.
+$ sudo tcpdump -ieth0 -elnX -c10 -rdump.data
+
+-p     Don't  put  the  interface into promiscuous mode.  Note that the
+       interface might be in promiscuous mode for  some  other  reason;
+       hence,  `-p'  cannot  be used as an abbreviation for `ether host
+       {local-hw-addr} or ether broadcast'.
+       不要把网卡置于混杂模式
+
+-s     Snarf snaplen bytes of data from each  packet  rather  than  the
+       default  of 65535 bytes.  Packets truncated because of a limited
+       snapshot are indicated in the output  with  ``[|proto]'',  where
+       proto  is the name of the protocol level at which the truncation
+       has occurred.  Note that taking larger snapshots both  increases
+       the amount of time it takes to process packets and, effectively,
+       decreases the amount of packet buffering.  This may cause  pack-
+       ets to be lost.  You should limit snaplen to the smallest number
+       that will capture the protocol information you're interested in.
+       Setting  snaplen to 0 sets it to the default of 65535, for back-
+       wards compatibility with recent older versions of tcpdump.
+
+       -s0 用以抓取65535字节的包
+</code></pre>
+
+<h1 id="expression">expression</h1>
+
+<pre><code>The filter expression consists of one or more  primitives.   Primitives
+usually consist of an id (name or number) preceded by one or more qual-
+ifiers.  There are three different kinds of qualifier: type, dir, proto
+
+表达式用于过滤要dump的packets。理解了awk得过滤，这个也差不多。
+详见 man 7 pcap-filter。
+
+格式：tcpdump -elnX -c 10 'expression'
+expression的格式为：qualifier id(id是一个数字或者名字).
+</code></pre>
+
+<h2 id="qualifiers">qualifiers</h2>
+
+<h3 id="type">type</h3>
+
+<pre><code>type qualifiers say what kind of thing the  id  name  or  number
+refers  to. 通常的types是host(主机), net(网络), port(端口)和portrange(连续的端口)
+
+// dump与192.168.9.73的包
+$ sudo tcpdump -enl -c10 'host 192.168.9.73'
+
+// 在上面的基础上，加上端口为10001的限制
+$ sudo tcpdump -enl -c10 'host 192.168.9.73 and port 10001'
+</code></pre>
+
+<h3 id="dir">dir</h3>
+
+<pre><code>dir qualifiers specify a particular transfer direction to and/or
+from id
+指定方向了，这个相当有用，常用的就是src, dst了
+
+// dump来自192.168.9.73的包，并且目标的端口是10001
+$ sudo tcpdump -enl -c10 'src host 192.168.9.73 and dst port 10001'
+
+// dump来自192.168.9.73的包，并且目标的端口是10001到10100之间的包
+$ sudo tcpdump -enl -c10 'src host 192.168.9.73 and dst portrange 10001'
+</code></pre>
+
+<h3 id="proto">proto</h3>
+
+<pre><code>proto qualifiers restrict the match to  a  particular  protocol.
+Possible  protos are: ether, fddi, tr, wlan, ip, ip6, arp, rarp,
+decnet, tcp and udp.
+估计常用到的就是tcp和udp了。。
+
+// dump来自192.168.9.73的包，并且目标的端口是10001的tcp包
+$ sudo tcpdump -enl -c10 'tcp and src host 192.168.9.73 and dst port 10001'
+</code></pre>
+
+<h3 id="其他常用的">其他常用的</h3>
+
+<pre><code>In addition to the above, there are some special  `primitive'  keywords
+that  don't  follow  the pattern: gateway, broadcast, less, greater and
+arithmetic expressions.  All of these are described below.jjjjkkkk
+
+less length
+    True  if  the  packet has a length less than or equal to length.
+    This is equivalent to:
+    len &lt;= length.
+
+// dump来自192.168.9.73的tcp包，且包大小小于100，greater的用法一样
+// 注意，用-v选项才可以看到包的大小，如果想看的话
+$ sudo tcpdump -nlv -c10 'tcp and src host 192.168.9.73 and less 100'
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p>man tcpdump<br />
+<a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/14/2322659.html">Linux tcpdump命令详解</a></p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2015-01-06</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2015-01-24-returning-a-reference/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">函数返回引用</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2014-12-16-install-octopress-on-mac/">
+            <span class="next-text nav-default">在mac上安装octopress</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

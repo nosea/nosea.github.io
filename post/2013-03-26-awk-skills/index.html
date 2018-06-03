@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Awk Skills - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction Awk 常用技巧  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-03-26-awk-skills/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Awk Skills" />
+<meta property="og:description" content="Introduction
+
+Awk 常用技巧
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-03-26-awk-skills/" />
+
+
+
+<meta property="article:published_time" content="2013-03-26T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-03-26T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Awk Skills">
+<meta itemprop="description" content="Introduction
+
+Awk 常用技巧
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-03-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-03-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="747">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Awk Skills"/>
+<meta name="twitter:description" content="Introduction
+
+Awk 常用技巧
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Awk Skills</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-03-26 </span>
+        <div class="post-category">
+            
+              <a href="/categories/awk/"> Awk </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#content">Content</a>
+<ul>
+<li><a href="#one-liners">One-liners</a></li>
+<li><a href="#在awk中引用shell变量">在awk中引用shell变量</a></li>
+<li><a href="#在awk中使用shell命令">在awk中使用shell命令</a></li>
+</ul></li>
+<li><a href="#exercises">Exercises</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>Awk 常用技巧
+</code></pre>
+
+<p></p>
+
+<h1 id="content">Content</h1>
+
+<h2 id="one-liners">One-liners</h2>
+
+<pre><code>1、打印行数
+    END {print NR}
+2、打印第N行
+    NR == N
+3、打印每行的最后一个Field
+    {print $NF}
+4、打印最后一行的最后一个Field
+    {field = $NF}
+    END {print field}
+5、打印超过4个field的行
+    NF &gt; 4
+6、打印最后一个field大于4的行
+    $NF &gt; 4
+7、统计所有field的个数
+    {nf = nf + NF}
+    END {print nf}
+8、统计包含xxx的行数
+    /xxx/ {nlines = nlines + 1}
+    END {print nlines}
+9、打印第一个field最大的field和它所在的行(假设$1有大于0的行)
+    $1 &gt; max {max = $1; maxline = $0}
+    END {print max, maxline}
+10、打印至少有一个field的行
+    NF &gt; 0
+11、打印超过80个字符的行
+    length($0) &gt; 80
+12、打印field个数和行
+    {print NF, $0}
+13、打印头两个field，逆序
+    {print $2, $1}
+14、交换每行的头两个field，然后打印行
+    {temp = $1; $1 = $2; $2 = temp; print}
+15、将第一个field替换为行号，然后打印
+    {$1 = NR; print}
+16、将第二个field清空，然后打印
+    {$2 = &quot;&quot;; print}
+17、将每行的field逆序打印
+    {   for(i=NF; i&gt;0; i=i-1) printf(&quot;%s &quot;, $i)
+        printf(&quot;\n&quot;)
+    }    
+18、计算每行field值的和，并打印(假设都是数字)
+    {   sum = 0
+        for(i=1; i&lt;=NF; i=i+1) sum = sum + $i
+        print sum
+    }
+19、将所有的field值加起来，打印
+    {for(i=1; i&lt;=NF; i=i+1) sum = sum + $i}
+    END {print sum}
+20、将每行的field都换成绝对值后再打印
+    {   for(i=1; i&lt;=NF; i=i+1) if($i &lt; 0) $i = -$i
+        print 
+    }
+21、去除相同的行
+    awk '!a[$0]++'
+22、打印第一个field是以M之后的字母开头的单词的行
+    awk '$1 &gt; &quot;M&quot;'
+23、获取机器的公网IP
+    ifconfig | awk -F'[ ]+|:' '/inet addr/{if($4 !~ /^192\.168|^172\.(1[6-9]|2[0-9]|3[0-1])|^10\.|^127|^0/) print $4}' 
+24、去掉每行中的第一个field
+    awk '{print substr($0, index($0, $2))}'
+</code></pre>
+
+<h2 id="在awk中引用shell变量">在awk中引用shell变量</h2>
+
+<pre><code>$ name='Tom'
+$ awk 'BEGIN{print &quot;'$name'&quot;}'
+Tom
+$ awk -v s_name=$name 'BEGIN{print s_name}'
+Tom
+注意：如果变量中包含空格，应该这样使用, 即两边双引号，中间单引号
+a=$(date  +&quot;%Y-%m-%d %H:%M:%S&quot; -d&quot;3 days&quot;)
+b=$(date  +&quot;%Y-%m-%d %H:%M:%S&quot;)
+echo &quot;good&quot; | awk  '{if(&quot;'&quot;$a&quot;'&quot; != &quot;'&quot;$b&quot;'&quot;)print &quot;llll&quot;}'
+</code></pre>
+
+<h2 id="在awk中使用shell命令">在awk中使用shell命令</h2>
+
+<pre><code>awk 'BEGIN{system(&quot;echo \&quot;Enter number:\&quot;&quot;); getline num; print &quot;num is: &quot; num}'
+# 注意引号的转义
+awk 'BEGIN{&quot;whoami&quot; | getline ; print &quot;Your name is: &quot; $0}'
+</code></pre>
+
+<h1 id="exercises">Exercises</h1>
+
+<pre><code>$ cat a.txt 
+111 org
+222 edu
+333 gov 
+444 net 
+$ cat b.txt 
+111 Tom Green.
+444 Ani Teen.
+888 Dany Cross. 
+# 结果要求
+----------------------------------------------------
+111--org--Tom--Green.
+444--net--Ani--Teen.
+----------------------------------------------------
+$ awk -v OFS='--' 'NR==FNR{a[$1]=$2}; NR!=FNR &amp;&amp; a[$1]{print $1, a[$1], $2, $3}' a.txt b.txt 
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p>The Awk Programming Language</p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-03-26</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-03-27-file-mode-of-unix/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">file mode of unix</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-03-26-awk-basic/">
+            <span class="next-text nav-default">Awk 基础</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

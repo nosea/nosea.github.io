@@ -6,10 +6,124 @@
     <description>Recent content in Shell on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Dec 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Aug 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/shell/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bash tips</title>
+      <link>http://localhost:1313/post/2014-08-31-bash-tips/</link>
+      <pubDate>Sun, 31 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2014-08-31-bash-tips/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;long time tips
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>shell color format</title>
+      <link>http://localhost:1313/post/2014-01-01-shell-color-format/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2014-01-01-shell-color-format/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;终端颜色打印
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>shell 条件表达式</title>
+      <link>http://localhost:1313/post/2013-10-14-shell-conditional-expression/</link>
+      <pubDate>Mon, 14 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-10-14-shell-conditional-expression/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Shell条件测试
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell 命令行参数解析</title>
+      <link>http://localhost:1313/post/2013-10-13-command-line-arguments-process-in-shell/</link>
+      <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-10-13-command-line-arguments-process-in-shell/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;    命令行参数的处理是最常用的需求，主要处理长选项和短选项
+目前常用的是getopt和getopts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell 多进程</title>
+      <link>http://localhost:1313/post/2013-10-12-shell-multiprocess/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-10-12-shell-multiprocess/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;  Shell没有多进程的概念，但是可以通过将任务放在后台以及命名管道实现
+多进程的功能
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell One-liners</title>
+      <link>http://localhost:1313/post/2013-04-11-shell-one-liners/</link>
+      <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-11-shell-one-liners/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;单行脚本备忘
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Special Characters of Shell</title>
+      <link>http://localhost:1313/post/2013-03-28-special-characters-of-shell/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-28-special-characters-of-shell/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;shell 特殊字符
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell Skills</title>
+      <link>http://localhost:1313/post/2013-03-27-shell-skills/</link>
+      <pubDate>Wed, 27 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-27-shell-skills/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;常用备忘录
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>shell basic</title>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>shell 条件表达式 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction Shell条件测试  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-10-14-shell-conditional-expression/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="shell 条件表达式" />
+<meta property="og:description" content="Introduction
+
+Shell条件测试
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-10-14-shell-conditional-expression/" />
+
+
+
+<meta property="article:published_time" content="2013-10-14T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-10-14T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="shell 条件表达式">
+<meta itemprop="description" content="Introduction
+
+Shell条件测试
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-10-14T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-10-14T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="904">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="shell 条件表达式"/>
+<meta name="twitter:description" content="Introduction
+
+Shell条件测试
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">shell 条件表达式</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-10-14 </span>
+        <div class="post-category">
+            
+              <a href="/categories/shell/"> Shell </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#说明">说明</a>
+<ul>
+<li><a href="#测试表达式">测试表达式</a></li>
+<li><a href="#逻辑表达式">逻辑表达式</a></li>
+<li><a href="#文件状态">文件状态</a></li>
+<li><a href="#字符串测试">字符串测试</a></li>
+<li><a href="#数字测试">数字测试</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>Shell条件测试
+</code></pre>
+
+<p></p>
+
+<h1 id="说明">说明</h1>
+
+<pre><code>常用的测试主要有文件状态测试、字符串测试、数值测试
+</code></pre>
+
+<h2 id="测试表达式">测试表达式</h2>
+
+<pre><code>## 使用&quot;if&quot; + &quot;[]&quot;
+if [ -f /etc/rc.local ]; then
+    echo &quot;OK&quot;
+fi
+## 使用&quot;if&quot; + &quot;test&quot;命令
+if test -f /etc/rc.local; then
+    echo &quot;OK&quot;
+fi
+## 使用&quot;[]&quot; + &quot;&amp;&amp;&quot;
+[ -f /etc/rc.local ] &amp;&amp; echo &quot;OK&quot;
+</code></pre>
+
+<h2 id="逻辑表达式">逻辑表达式</h2>
+
+<pre><code>## 测试连接
+-a : 逻辑与
+-o : 逻辑或
+!  : 逻辑非
+## 外部连接
+&amp;&amp; : 逻辑与
+|| : 逻辑或
+eg:
+  [ -z ${MSG} -a -z ${USER} ] &amp;&amp; echo &quot;OK&quot;  
+</code></pre>
+
+<h2 id="文件状态">文件状态</h2>
+
+<pre><code>-b FILE
+    文件存在，并且是块文件，返回True
+-c FILE
+    文件存在，并且是字符文件，返回True
+-d FILE
+    文件存在，并且是目，返回True录
+-e FILE
+    文件存在，返回True
+-f FILE
+    文件存在，并且是普通文件，返回True
+-g FILE
+    文件存在，并且是set-group-ID，返回True
+-G FILE
+    文件存在，并且属于有效组ID，返回True
+-h FILE
+    文件存在，并且是软链接(Symbolic Links)，等于-L，返回True
+-k FILE
+    文件存在，并且设置了粘住位，返回True
+-L FILE
+    同-h
+-O FILE
+    文件存在，并且属于有效用户ID，返回True
+-p FILE
+    文件存在，并且是命名管道，返回True
+-r FILE
+    文件存在，并且赋予了读权限，返回True
+-s FILE
+    文件存在，并且文件大小大于0，返回True
+-S FILE
+    文件存在，并且是socket文件，返回True
+-t FD
+    文件描述符在终端中打开，返回True
+-u FILE
+    文件存在，并且set-user-ID位被设置了，返回True
+-w FILE
+    文件存在，并且赋予了写权限，返回True
+-x FILE
+    文件存在，并且赋予了执行(搜索)权限，返回True
+FILE1 -nt FILE2
+    FILE1比FILE2新(根据最新修改时间)，或者FILE1存在，但是FILE2不存在，返回True
+FILE1 -ot FILE2
+    FILE1比FILE2旧，或者FILE2存在而FILE1不存在，返回True
+FILE1 -ef FILE2
+    FILE1和FILE2引用同一个设备或者同一个inode数字，返回True
+</code></pre>
+
+<h2 id="字符串测试">字符串测试</h2>
+
+<pre><code>-z string
+    字符串的长度为0，返回True
+-n string
+    字符串的长度不为0，返回True
+string1 == string2
+    字符串相等，返回True
+string1 != string2
+    字符串不相等，返回True
+string1 &lt; string2
+    这个比较按照通用字符串比较
+string1 &gt; string2
+    同上
+</code></pre>
+
+<h2 id="数字测试">数字测试</h2>
+
+<pre><code>arg1 OP arg2  ##arg1和arg2可以是正负数
+  OP:
+    -eq ## 相等
+    -ne ## 不相等
+    -lt ## 小于
+    -le ## 小于等于
+    -gt ## 大于
+    -ge ## 大于等于
+</code></pre>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-10-14</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-10-20-linux-command-iwconfig/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Linux命令iwconfig</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-10-13-command-line-arguments-process-in-shell/">
+            <span class="next-text nav-default">Shell 命令行参数解析</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

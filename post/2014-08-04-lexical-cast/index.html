@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Lexical_Cast - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction 数值与字符串转换之用，更方便，安全，有效。  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2014-08-04-lexical-cast/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Lexical_Cast" />
+<meta property="og:description" content="Introduction
+
+数值与字符串转换之用，更方便，安全，有效。
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2014-08-04-lexical-cast/" />
+
+
+
+<meta property="article:published_time" content="2014-08-04T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-08-04T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Lexical_Cast">
+<meta itemprop="description" content="Introduction
+
+数值与字符串转换之用，更方便，安全，有效。
+
+
+">
+
+
+<meta itemprop="datePublished" content="2014-08-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-08-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="227">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Lexical_Cast"/>
+<meta name="twitter:description" content="Introduction
+
+数值与字符串转换之用，更方便，安全，有效。
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Lexical_Cast</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-08-04 </span>
+        <div class="post-category">
+            
+              <a href="/categories/boost/"> Boost </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#使用">使用</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>数值与字符串转换之用，更方便，安全，有效。
+</code></pre>
+
+<p></p>
+
+<h1 id="使用">使用</h1>
+
+<pre><code class="language-c++">#include &lt;boost/lexical_cast.hpp&gt;
+#include &lt;boost/random.hpp&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+string number_to_string(const vector&lt;int&gt; &amp;ivec);
+vector&lt;int&gt; gen_ivec(const int &amp;low, const int &amp;top);
+vector&lt;int&gt; string_to_number(const string &amp;s);
+
+int main(int argc, char **argv)
+{
+	vector&lt;int&gt; ivec = gen_ivec(1, 100);
+	
+
+	cout &lt;&lt; &quot;Begin int to string...&quot; &lt;&lt; endl;
+	string res = number_to_string(ivec);
+	cout &lt;&lt; res &lt;&lt; endl;
+
+	cout &lt;&lt; &quot;Begin string to int...&quot; &lt;&lt; endl;
+	vector&lt;int&gt; ivec_handle = string_to_number(res);
+
+	for (vector&lt;int&gt;::iterator iter=ivec_handle.begin();
+		iter!=ivec_handle.end(); ++iter)
+	{
+		cout &lt;&lt; *iter;
+	}
+	cout &lt;&lt; endl;
+
+	return 0;
+}
+
+/*
+*	convert an array of integers to string whiche divided by &quot;=&quot;
+*/
+string number_to_string(const vector&lt;int&gt; &amp;ivec)
+{
+	string ret;
+
+	for (vector&lt;int&gt;::const_iterator iter=ivec.begin(); 
+		iter!=ivec.end(); ++iter)
+	{
+		ret = ret + boost::lexical_cast&lt;string&gt;(*iter) + &quot;=&quot;;
+	}
+
+	return ret;
+}
+
+
+/*
+*	convert string to an array of integers
+*/
+vector&lt;int&gt; string_to_number(const string &amp;s)
+{
+	vector&lt;int&gt; ivec;
+
+	for (string::const_iterator iter=s.begin();
+		iter!=s.end(); ++iter)
+	{
+		try
+		{
+			ivec.push_back(boost::lexical_cast&lt;int&gt;(*iter));
+		}
+		catch (const boost::bad_lexical_cast&amp;){} // skip it
+	}
+
+	return ivec;
+}
+
+
+/*
+* generate random number
+*/
+vector&lt;int&gt; gen_ivec(const int &amp;low, const int &amp;top)
+{
+	vector&lt;int&gt; ivec; 
+
+	boost::uniform_int&lt;&gt; distribution(low, top) ;
+	boost::mt19937 engine;
+	boost::variate_generator&lt;boost::mt19937, boost::uniform_int&lt;&gt;&gt; irandom (engine, distribution);
+
+	for (int i=low; i&lt;top; ++i)
+	{
+		ivec.push_back(irandom());
+		//cout &lt;&lt; irandom() &lt;&lt; &quot;, &quot;;
+	}
+
+	return ivec;
+}
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://www.boost.org/doc/libs/1_55_0/doc/html/boost_lexical_cast.html">boost</a></p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2014-08-04</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2014-08-31-bash-tips/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">bash tips</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2014-01-05-html-basic/">
+            <span class="next-text nav-default">HTML Basic</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

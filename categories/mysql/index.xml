@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MySQL on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/mysql/</link>
+    <description>Recent content in MySQL on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 08 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySQL Skills</title>
+      <link>http://localhost:1313/post/2013-12-08-mysql-skills/</link>
+      <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-12-08-mysql-skills/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;纯记录
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mysql statistical analysis exercise</title>
+      <link>http://localhost:1313/post/2013-04-17-mysql-statistical-analysis-exercise/</link>
+      <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-17-mysql-statistical-analysis-exercise/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;MySQL查询练习题
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mysql Basic</title>
+      <link>http://localhost:1313/post/2013-04-08-mysql-basic/</link>
+      <pubDate>Mon, 08 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-08-mysql-basic/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;MySQL 笔记
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

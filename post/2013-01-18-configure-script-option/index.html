@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Configure配置参数 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction  每个GNU软件都应有一个名为configure的shell脚本。可以在编译之前，向这个脚本传递一些 参数，这些参数描述了软件安装的环境(什么硬件，什么系统，安装在哪个目录之类的)。  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-01-18-configure-script-option/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Configure配置参数" />
+<meta property="og:description" content="Introduction
+
+  每个GNU软件都应有一个名为configure的shell脚本。可以在编译之前，向这个脚本传递一些
+参数，这些参数描述了软件安装的环境(什么硬件，什么系统，安装在哪个目录之类的)。
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-01-18-configure-script-option/" />
+
+
+
+<meta property="article:published_time" content="2013-01-18T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-01-18T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Configure配置参数">
+<meta itemprop="description" content="Introduction
+
+  每个GNU软件都应有一个名为configure的shell脚本。可以在编译之前，向这个脚本传递一些
+参数，这些参数描述了软件安装的环境(什么硬件，什么系统，安装在哪个目录之类的)。
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-01-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-01-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1724">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Configure配置参数"/>
+<meta name="twitter:description" content="Introduction
+
+  每个GNU软件都应有一个名为configure的shell脚本。可以在编译之前，向这个脚本传递一些
+参数，这些参数描述了软件安装的环境(什么硬件，什么系统，安装在哪个目录之类的)。
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Configure配置参数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-01-18 </span>
+        <div class="post-category">
+            
+              <a href="/categories/linux/"> Linux </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#目录选项">目录选项</a></li>
+<li><a href="#其他选项">其他选项</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>  每个GNU软件都应有一个名为configure的shell脚本。可以在编译之前，向这个脚本传递一些
+参数，这些参数描述了软件安装的环境(什么硬件，什么系统，安装在哪个目录之类的)。
+</code></pre>
+
+<p></p>
+
+<h1 id="目录选项">目录选项</h1>
+
+<pre><code>--prefix=
+  下面的目录变量默认值都是以这个目录变量为基础的，即下面的目录默认都在这个目录里。
+  用来指定软件安装的主目录，默认值为/usr/local
+--exec-prefix= 
+  与--prefix类似，创建下面某些变量的默认值会用到它。它的默认值是$(prefix)
+--bindir=
+  用户可执行程序存放目录，默认为/usr/local/bin
+--sbindir= 
+  超级用户可执行程序存放目录，默认为/usr/local/sbin
+--libexecdir= 
+  可执行程序存放目录，但它是供程序使用的，不直接由用户使用，默认为/usr/local/libexec
+====================下面是数据文件目录=======================
+程序运行期间所用的数据文件通常被分为两类
+* 一些文件正常情况下会被程序修改；其它的文件则永远不会(当然，用户可能会修改一些)
+* 一些与体系架构无关的文件可以放置于一个站点供所有机器共享
+  体系架构相关的文件只能被同类操作系统所共享，其它的则根本不会共享
+--datarootdir=
+  用来存放与体系架构无关的数据文件的根目录，默认是/usr/local/share
+  datadir, infodir, mandir的默认值都与它有关
+--datadir
+  用来存放与体系架构无关的只读的数据文件。通常情况下默值与datarootdir相同，用
+  两个变量表示以便单独使用而不用影响mandir，infodir之类的值
+--sysconfdir=
+  用来存放只读的配置文件，这些文件只属于单个主机。这个目录里的所有文件通常是文本文件。
+  默认值为/usr/local/etc
+  可执行程序和程序运行时修改的文件都不应该放在这个目录
+--sharedstatedir= 
+  用来存放与体系架构无关的文件，这些文件在程序运行时会被修改，默认值/usr/local/com
+--localstatedir= 
+  用来存放属于特定主机的文件，这些文件在程序运行时会被修改，默认值/usr/local/var
+====================下面的目录用于存放指定类型的文件=====================
+每个GNU安装包都应有Info文件，所以每个程序都需要infodir，但并不是所有都需要libdir或
+lispdir
+--includedir= 
+  C和C++头文件的目录,默认是/usr/local/include，除了GCC，大多数编译器不会在这个目录
+  寻找头文件，所以这个目录只对GCC有用。对于其他的编译器，可以把头文件放到两个地方，
+  一个includedir指定的地方, 一个是oldincludedir指定的地方
+--oldincludedir=
+  存放编译器所用的头文件(除了GCC)，默认值/usr/include
+--docdir=
+  用来存放package的文档文件(不是info文件)，默认值 /usr/local/share/doc/yourpkg
+--infodir=
+  用来存放package的info文件，默认值/usr/local/share/info
+  infodir与docdir分开是为了与现存的惯例兼容
+--htmldir= 
+--dvidir= 
+--pdfdir= 
+--psdir=
+  上面的目录用于存放特定格式的文档文件，默认值均为docdir的值
+--libdir
+  库文件和动态装载模块的目录,默认值/usr/local/lib，注意可执行文件应放在libexecdir
+--lispdir
+  用于存放Emacs Lisp文件，默认是/usr/local/share/emacs/site-lisp
+--localedir
+  存放地区指定信息。默认/usr/local/share/locale
+--mandir
+  man文档存放目录
+--man1dir
+   ...
+--man7dir
+--srcdir=
+  要编译的源代码目录。值通常由configure脚本自动传入
+</code></pre>
+
+<h1 id="其他选项">其他选项</h1>
+
+<pre><code>1.configure也接受一个代表软件所要安装的系统的参数，类似cpu-company-system
+  如GNU/Linux或许是：i686-pc-linux-gnu
+  同时也可以采用--build=buildtype这样的选项形式
+  例如configure --build=i686-pc-linux-gnu  等价于
+      configure i686-pc-linux-gnu
+2.其他的选项用于更多细节，include或者不include，调整参数命名之类的
+--enable-feature[=parameter]
+  可以让用户选择自己想要的功能，如果想要某个具体的功能，最好明确指出
+--with-packagexx
+  packagexx将会被安装，并且配置能和packagexx共同工作
+variable=value
+  指定变量的值，用来覆盖默认的编译值
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<ul>
+<li><a href="http://www.gnu.org/prep/standards/html_node/Configuration.html">How Configuration Should Work</a><br /></li>
+<li><a href="http://man.ddvip.com/database/pgsqldoc-8.1c/install-procedure.html">PostgreSQL 8.1 中文文档-14.5. 安装过程</a><br /></li>
+<li><a href="http://www.cnblogs.com/flyfish10000/articles/1986054.html">Autoconf学习——编写configure脚本</a><br />
+Thanks!
+
+<br /></li>
+</ul>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-01-18</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-02-01-python-stdlib-configparser/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python标准库configparser</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-01-17-introduction-to-lfs/">
+            <span class="next-text nav-default">LFS 介绍</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

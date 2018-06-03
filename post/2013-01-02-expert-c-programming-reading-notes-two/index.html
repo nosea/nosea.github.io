@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>《C专家编程》读书笔记(二) - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction 《C专家编程》第二章笔记 第2章 - 这不是bug，而是语言特性 2.1这关语言特性何事 1.在C语言中，存在一些含糊之处或近似含糊之处 2.若遇到m" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-01-02-expert-c-programming-reading-notes-two/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="《C专家编程》读书笔记(二)" />
+<meta property="og:description" content="Introduction 《C专家编程》第二章笔记 第2章 - 这不是bug，而是语言特性 2.1这关语言特性何事 1.在C语言中，存在一些含糊之处或近似含糊之处 2.若遇到m" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-01-02-expert-c-programming-reading-notes-two/" />
+
+
+
+<meta property="article:published_time" content="2013-01-02T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-01-02T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="《C专家编程》读书笔记(二)">
+<meta itemprop="description" content="Introduction 《C专家编程》第二章笔记 第2章 - 这不是bug，而是语言特性 2.1这关语言特性何事 1.在C语言中，存在一些含糊之处或近似含糊之处 2.若遇到m">
+
+
+<meta itemprop="datePublished" content="2013-01-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-01-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1931">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="《C专家编程》读书笔记(二)"/>
+<meta name="twitter:description" content="Introduction 《C专家编程》第二章笔记 第2章 - 这不是bug，而是语言特性 2.1这关语言特性何事 1.在C语言中，存在一些含糊之处或近似含糊之处 2.若遇到m"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">《C专家编程》读书笔记(二)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-01-02 </span>
+        <div class="post-category">
+            
+              <a href="/categories/cc&#43;&#43;/"> CC&#43;&#43; </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#第2章-这不是bug-而是语言特性">第2章 - 这不是bug，而是语言特性</a>
+<ul>
+<li><a href="#2-1这关语言特性何事">2.1这关语言特性何事</a></li>
+<li><a href="#2-2多做之过">2.2多做之过</a></li>
+<li><a href="#2-3误做之过">2.3误做之过</a></li>
+<li><a href="#2-4少做之过">2.4少做之过</a></li>
+<li><a href="#2-5轻松一下-有些特性确实就是bug">2.5轻松一下————有些特性确实就是bug</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="introduction">Introduction</h1>
+
+<pre><code>《C专家编程》第二章笔记
+</code></pre>
+
+<!-- more -->
+
+<h1 id="第2章-这不是bug-而是语言特性">第2章 - 这不是bug，而是语言特性</h1>
+
+<h2 id="2-1这关语言特性何事">2.1这关语言特性何事</h2>
+
+<pre><code>1.在C语言中，存在一些含糊之处或近似含糊之处
+2.若遇到malloc(strlen(str));，几乎可以断定是错误的，malloc(strlen(str)+1)才是正确的
+3.一个'L'的NUL和两个'LL'的NULL
+  一个'L'的NUL用于结束一个ACSII字符串
+  两个'LL'的NULL用于表示什么也不指向(空指针)
+</code></pre>
+
+<h2 id="2-2多做之过">2.2多做之过</h2>
+
+<pre><code>&quot;多做之过&quot;，就是语言中存在某些不应该存在的特性。这些特性包括容易出错的switch语句，相邻字符
+串常量自动连接和缺省的全局范围
+1.switch的问题
+  在switch的左花括号之后，可以声明一些变量，从而进行一些局部分配
+  但为这些变量加上初始值没有什么作用，因为它绝不会执行，语句从匹配表达式的case开始
+  --&gt;验证了下，如果在那里初始化变量，VC下时会报错的
+
+  switch内的标签，比如case num: 如果case写错，比如default: 写成了defauit: 是不会报错的
+  --&gt;VC下验证了下，会给出警告
+
+  由于C下const关键字并不是真正的常量，所以case后放置const修饰的变量会产生编译错误
+  --&gt;VC下验证，居然没有错，但是如果用普通变量就会显示“case expression not constant”
+
+  switch语句如果每个case语句后不加break，就会依次执行下去，这个叫“fall through”情况
+
+  break语句是跳出最近的那层循环语句或者switch语句 - 跟if语句没有关系
+2.ANSI C引入的另一个新特性是相邻的字符串常量将被自动合并成一个字符串的约定
+  以前是要加反斜杠(\)
+  printf(&quot;aaaa&quot;
+         &quot;bbbb&quot;
+         &quot;cccc&quot;);
+  这样后，编译时会自动合并，除了最后一个字符串，其余每个字符串最后末尾的&quot;\0&quot;会被自动删除
+  但是这样的特性如果放在字符串数组初始化时，漏掉逗号时，相邻字符串会合并而且没有任何提示信息
+  char *name[] = {&quot;aaaa&quot; &quot;bbbb&quot;, &quot;cccc&quot;};
+  上面的name[1]其实是&quot;aaaabbbb&quot;
+3.太多的缺省可见性
+  定义C函数时，在缺省情况下函数的名字是全局可见的，可以加个extern关键字，效果一样
+  但是如果想限制在文件之外不可见，则必须加static关键字
+  funcition name() /*在任何地方均可见*/ -- 这种缺省的可见性被多次证明是个错误
+  extern funcition name() /*在任何地方均可见*/
+  static funcition name() /*在这个文件之外不可见*/
+  我的确是没有习惯在函数名前面加存储类型说明符的习惯^-^
+</code></pre>
+
+<h2 id="2-3误做之过">2.3误做之过</h2>
+
+<pre><code>C语言的&quot;误做之过&quot;就是语言中有误导性质或不适当的特性。有些跟c的简洁有关，有些则与操作符的
+优先级有关
+1.许多符号被&quot;重载&quot;而具有好几种意义 - 太简洁
+  static  
+        函数内部，表示该变量的值在各个调用期间一直保持延续性
+        函数这一级，表示该函数只对本文件可见
+  extern
+        用于函数的定义，表示全局可见(属于冗余的)
+        用于变量，表示它在其它地方定义
+  void
+        作为函数的返回类型，表示不返回任何值
+        在指针声明中，表示通用指针的类型
+        位于参数列表中，表示没有参数
+  *
+        乘法运算符
+        用于指针，间接引用
+        在声明中，表示指针
+  &amp;
+        位的AND操作符
+        取地址操作符
+  ()
+        在函数定义中，包围形式参数表
+        调用一个函数
+        改变表达式的运算次序
+        将值转换为其他类型(强制转换)
+        定义带参数的宏
+        包围sizeof操作符的操作数(如果它是类型名)
+   --&gt;我觉得简洁也是一种美
+2.有些运算符的优先级是错误的
+  -------------------------------------------------------------------
+  .的优先级高于* ，-&gt;操作符用于消除这个问题
+  *p.f其实是 *(p.f)， 而不是(*p).f)
+  -------------------------------------------------------------------
+  []高于*
+  int *ap[] 其实是int *(ap[]) 
+  -------------------------------------------------------------------
+  函数()高于*
+  int *fp() 其实是int *(fp())
+  -------------------------------------------------------------------
+  还有一个关于逗号运算符的，
+    int i = 1, 2;    /*逗号运算符是最右边的值，但是赋值符的优先级更高，所以为1*/
+    --&gt; 因此，我觉得为避免出错，多用括号 int i = (1, 2);
+  --&gt;还是不必纠结这个了，凡是有疑虑的，均用括号来解决
+
+  有的专家建议:
+     在C语言中记牢两个优先级就够了:乘法和除法先于加法和减法，涉及其他的操作符时，一律
+     加上括号。
+3.关于操作符的&quot;结合性&quot; - 在几个操作符具有相同的优先级时决定先执行哪个
+  每个操作符拥有某一级别的优先级，同时也拥有左结合性或右结合性
+  所有赋值符(包括符合赋值)都具有右结合性 - 也就是表达式最右边的操作最先执行
+  具有左结合性的 - 如位操作符&amp;, |
+</code></pre>
+
+<h2 id="2-4少做之过">2.4少做之过</h2>
+
+<pre><code>属于&quot;少做之过&quot;的特性就是语言应该提供但未能提供的特性
+1.关于空格
+  在多行用反斜杠(\)分割的时候，\后不要加空格，否则会出现错误
+
+  关于int e = *c/ *d; --&gt; 如果/*连在一起，就是注释了，必要的空格不能少
+
+  防止这种情况的出现
+  a //*
+  //*/ b     --&gt;就变成a/b了
+</code></pre>
+
+<h2 id="2-5轻松一下-有些特性确实就是bug">2.5轻松一下————有些特性确实就是bug</h2>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-01-02</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-01-04-expert-c-programming-reading-notes-three/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">《C专家编程》读书笔记(三)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2012-12-31-python-coding-rule/">
+            <span class="next-text nav-default">python编码规范</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

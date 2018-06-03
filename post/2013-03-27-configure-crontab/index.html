@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>cron配置 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction cron详解  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-03-27-configure-crontab/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="cron配置" />
+<meta property="og:description" content="Introduction
+
+cron详解
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-03-27-configure-crontab/" />
+
+
+
+<meta property="article:published_time" content="2013-03-27T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-03-27T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="cron配置">
+<meta itemprop="description" content="Introduction
+
+cron详解
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-03-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-03-27T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1565">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="cron配置"/>
+<meta name="twitter:description" content="Introduction
+
+cron详解
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">cron配置</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-03-27 </span>
+        <div class="post-category">
+            
+              <a href="/categories/linux/"> Linux </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#content">Content</a>
+<ul>
+<li><a href="#cron-开启-停止-重新启动">cron 开启、停止、重新启动</a></li>
+<li><a href="#配置文件">配置文件</a></li>
+<li><a href="#特殊字符">特殊字符</a></li>
+<li><a href="#命令">命令</a></li>
+<li><a href="#说明">说明</a></li>
+<li><a href="#注意">注意</a></li>
+<li><a href="#例子">例子</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>cron详解
+</code></pre>
+
+<p></p>
+
+<h1 id="content">Content</h1>
+
+<h2 id="cron-开启-停止-重新启动">cron 开启、停止、重新启动</h2>
+
+<pre><code>1、Fedora, CentOS
+  # /etc/init.d/crond start
+  # /etc/init.d/crond stop
+  # /etc/init.d/crond restart
+  如果要开机启动
+  # chkconfig --levels 35 crond on
+2、Ubuntu
+  是/etc/init.d/cron  start|stop|restart
+3、通用
+  # pgrep crond  注：判断crond 是否在运行；
+  # pkill crond  注：杀掉正在运行中的crond；
+  # pgrep crond  注：查看是否被杀掉了；
+  # /usr/sbin/crond  注：运行crond；
+</code></pre>
+
+<h2 id="配置文件">配置文件</h2>
+
+<pre><code>cron是一个服务器程序 - a daemon to execute scheduled commands
+CentOS, Ubuntu等的全局性配置文件在/etc/crontab
+每个用户都有自己的cron配置文件，可以通过crontab -e 来编辑
+在CentOS下
+$ cat /etc/crontab
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+
+# For details see man 4 crontabs
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# | .------------- hour (0 - 23)
+# | | .---------- day of month (1 - 31)
+# | | | .------- month (1 - 12) OR jan,feb,mar,apr ...
+# | | | | .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# | | | | |
+# * * * * * command to be executed
+
+对于全局性配置文件，需要root权限来更改，一般通过crontab -e来修改
+====================总的来说就是====================
+分 时 日 月 周 [用户名] 执行命令
+====================================================
+说明:
+分钟 -- 表示每小时的第几分钟来执行，范围是0-59
+小时 -- 表示每天的第几小时来执行，范围是0-23
+日期 -- 表示从每个月的第几天来执行，范围是1-31
+月份 -- 表示每年的第几个月来执行，范围是1-12
+周   -- 表示每周的第几天来执行，范围是0-6，0表示周日
+用户 -- 表示执行程序要通过哪个用户来执行，一般可省略
+命令 -- 执行的命令和参数
+
+修改了配置文件，为了让配置文件生效，需要重启cron，非root用户修改了，也要重启
+</code></pre>
+
+<h2 id="特殊字符">特殊字符</h2>
+
+<pre><code>*(星号) 代表全部，即每天，每周，每小时等都要执行
+,(逗号) 代表分隔时段
+-(减号) 代表一段时间范围
+/n      n是数字，代表每隔n单位个时间
+</code></pre>
+
+<h2 id="命令">命令</h2>
+
+<pre><code>$ crontab -e   # 编辑用户的cron配置文件
+$ crontab -l   # 查看当前用户的计划
+$ crontab -r   # 删除
+</code></pre>
+
+<h2 id="说明">说明</h2>
+
+<pre><code>每次执行完crontab -e后，都会在/var/spool/cron/里的tabs或者crontabs目录里生成一个与该用户同名的文件，
+文件的内容就是编辑的内容，这个文件不可以直接编辑，必须通过crontab -e来编辑。cron每过一分钟读一次
+这个文件，检查是否需要执行里面的命令。因此文件修改后不需要重新启动crond。
+除此之外，cron每分钟还要读一次/etc/crontab文件，这个文件是针对系统的，
+</code></pre>
+
+<h2 id="注意">注意</h2>
+
+<pre><code>1、每一条cron job执行后，系统会自动将输出以邮件的形式发给当前用户，可以通过mail命令查看
+   但是邮件占用存储空间，如果不需要输出的话，最好全部重定向输出： &gt;/dev/null 2&amp;1
+2、cron是无法识别当前的环境变量的，比如在login shell下调试是可以运行的，但是一放到cron下就运行失败
+   防止这个问题的出现可以有以下方法:
+   1) 所有可执行的文件都使用绝对路径
+   2) 在脚本里export
+      PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+</code></pre>
+
+<h2 id="例子">例子</h2>
+
+<pre><code># 每天晚上22:15 执行/usr/bin/下的update.sh
+15 22 * * * /usr/bin/update.sh 
+
+# 每个月的5号，10号，15号的晚上22:15执行/usr/bin/的update.sh
+15 22 5,10,15 * * /usr/bin/update.sh 
+
+# 每周三、周六晚上22:15执行/usr/bin/的update.sh
+15 22 * * 3,6 /usr/bin/update.sh
+
+# 每隔五分钟执行/usr/bin/的update.sh
+*/5 * * * * /usr/bin/update.sh  # */5 &lt;=&gt; 0-59/5
+
+# 每个月的4号和每周1到周3的早上11点
+0 11 4 * 1-3 command line
+
+晚上11点到早上7点之间，每隔一小时重启lighttpd
+* 23-7/1 * * * /usr/local/etc/rc.d/lighttpd restart
+
+
+The following lists an example of a user crontab file.
+
+# use /bin/bash to run commands, instead of the default /bin/sh
+SHELL=/bin/bash
+# mail any output to `paul', no matter whose crontab this is
+MAILTO=paul
+#
+# run five minutes after midnight, every day
+5 0 * * *       $HOME/bin/daily.job &gt;&gt; $HOME/tmp/out 2&gt;&amp;1
+# run at 2:15pm on the first of every month -- output mailed to paul
+15 14 1 * *     $HOME/bin/monthly
+# run at 10 pm on weekdays, annoy Joe
+0 22 * * 1-5    mail -s &quot;It's 10pm&quot; joe%Joe,%%Where are your kids?%
+23 0-23/2 * * * echo &quot;run 23 minutes after midn, 2am, 4am ..., everyday&quot;
+5 4 * * sun     echo &quot;run at 5 after 4 every sunday&quot;
+# Run on every second Saturday of the month
+0 4 8-14 * *    test $(date +%u) -eq 6 &amp;&amp; echo &quot;2nd Saturday&quot;
+--&gt; from man 5 crontab
+
+注:
+  当crontab运行shell脚本时，要由用户指定脚本的绝对路径，设置相应的环境变量.
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://www.linuxsir.com/main/node/209">计划任务工具 cron 的配置和说明</a></p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-03-27</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-03-27-shell-skills/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Shell Skills</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-03-27-file-mode-of-unix/">
+            <span class="next-text nav-default">file mode of unix</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

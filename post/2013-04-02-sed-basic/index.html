@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Sed Basic - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction sed 基础  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-04-02-sed-basic/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Sed Basic" />
+<meta property="og:description" content="Introduction
+
+sed 基础
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-04-02-sed-basic/" />
+
+
+
+<meta property="article:published_time" content="2013-04-02T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-04-02T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Sed Basic">
+<meta itemprop="description" content="Introduction
+
+sed 基础
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-04-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-04-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1385">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sed Basic"/>
+<meta name="twitter:description" content="Introduction
+
+sed 基础
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Sed Basic</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-04-02 </span>
+        <div class="post-category">
+            
+              <a href="/categories/linux/"> Linux </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#content">Content</a>
+<ul>
+<li><a href="#option">OPTION</a></li>
+<li><a href="#edit-command">edit command</a></li>
+<li><a href="#function">function</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>sed 基础
+</code></pre>
+
+<p></p>
+
+<h1 id="content">Content</h1>
+
+<h2 id="option">OPTION</h2>
+
+<pre><code>-n, --quiet, --silent
+-e 'edit command'
+    eg:
+    sed -e 'edit_command1' -e 'edit_command2'... file_to_process
+-f script-file
+-i[SUFFIX], --in-place[=SUFFIX]
+    说明：指定后缀方便保留备份
+    eg:
+    $ ls
+    data
+    $ sed -i.backup -e'1,4s/good/bad/' data
+    $ ls
+    data  data.backup # data.backup为原数据
+</code></pre>
+
+<h2 id="edit-command">edit command</h2>
+
+<pre><code>1、edit command的格式:
+   [address1[,address2]]function[argument]
+2、地址参数为
+   行数
+   or
+   regexp
+3、function为sed的内定函数，表示执行编辑动作
+4、当地址参数为regexp时，其前后必须加上&quot;/&quot;
+5、当只有一个地址参数时，表示符合地址的参数行才编辑
+   当有address1,address2时，表示对数据区间执行，
+   address1代表起始数据行，address2代表终止数据行
+</code></pre>
+
+<h2 id="function">function</h2>
+
+<pre><code>s
+  格式: [address1[,address2]]s/pattern/replacement/[flag]
+  pattern: regexp
+  replacement: 
+              &amp;:  pattern
+              \n:  表示pattern中第n个被\( \)括起来的字符串
+              \: 用来转义
+  flag:
+      g             替换所有满足的情况
+      十进制数m     表示替换行内第m个符合的字符串
+      p             表示替换第一个符合pattern的字符串后，将output输出到stdout
+      w wfile       表示替换第一个符合pattern的字符串后，输出到wfile内
+  若没有flag，则将资料行内第一个符合pattern的字符串用replacement替换
+  delimiter:
+            在&quot;/pattern/replacement/[flag]&quot;中，&quot;/&quot;是一个delimiter.
+            除了空白(blank),换行符(newline)之外，可以用任何字符作为delimiter.
+d   
+  说明: 删除数据行
+  格式: [address1[,address2]]d
+a
+  说明: 追加文本(Append text)
+  格式: [address]a\Text
+  eg: 
+  $ cat data 
+  1
+  2
+  3
+  4
+  5
+
+  $ sed '1,3afile' data 
+  1
+  file
+  2
+  file
+  3
+  file
+  4
+  5
+
+  $ sed '1,2afile\
+  &gt; port\
+  &gt; good' data
+  1
+  file
+  port
+  good
+  2
+  file
+  port
+  good
+  3
+  4
+  5
+
+i
+  说明:这个跟a类似，但是是插入行之前，而不是行之后.
+  注意:要想分行，必须加&quot;\&quot;backslash
+c 
+  说明: 这个是将address的内容change成c后面的内容
+  eg:
+  $ sed '1,2cgood' data   ## 1-2行被换成了good
+  good
+  3
+  4
+  5
+  ## 如果你要每行都换成good，可以这样
+  $ sed '/[0-9]/cgood' data  
+  ## OR
+  $ sed 'cgood' data
+  good
+  good
+  good
+  good
+  good
+p
+  说明: 就是将执行结果送至stdout
+  eg:
+  $ sed  '/[0-9]/p' data 
+  1
+  1
+  2
+  2
+  3
+  3
+  4
+  4
+  5
+  5
+  $ sed -n  '/[0-9]/p' data 
+  1
+  2
+  3
+  4
+  5
+l
+  说明: 将nonprinting字符以ASCII打印出来
+  eg：
+  $ cat data 
+  1    1
+  2
+  3
+  4
+  5
+
+  $ sed -n  '/[0-9]/l' data 
+  1\t1$
+  2$
+  3$
+  4$
+  5$
+r
+  说明: 就是将文件内的内容append到匹配的行后面
+  eg:
+  $ cat file1 
+  This is a test file
+  only contain two line
+  $ sed '1,3rfile1' data 
+  1
+  This is a test file
+  only contain two line
+  2
+  This is a test file
+  only contain two line
+  3
+  This is a test file
+  only contain two line
+  4
+  5
+w
+  格式: [address1[,address2]]w file
+  说明: 这个是将匹配的内容写file里，注意，file是被清空的
+  eg:
+  $ cat file1 
+  those words will be 
+  overwrite
+  $ sed -n '1,3w file1' data 
+  $ cat file1 
+  1    1
+  2
+  3
+y
+  格式: [address1[ ,address2]]y /xyz.../abc.../
+  说明: 这个是将pattern里的x，y，z换成a，b，c
+  eg:
+  $ cat data 
+  a b c d e f g h
+  1 2 3 4 5 6
+  $ sed 'y/abc/xyz/' data 
+  x y z d e f g h
+  1 2 3 4 5 6
+! 
+  说明: 这个表示不执行函数
+  eg:
+  $ cat data 
+  This is a 1 2 3
+  test 9 45
+  good
+  ok
+  thanks bye
+  $ sed '/[0-9]/!s/^./9/' data  ## 对含有数字的行不执行替换操作
+  This is a 1 2 3
+  test 9 45
+  9ood
+  9k
+  9hanks bye
+n 
+  说明: 表示读pattern的下一行
+  eg:
+  $ cat data 
+  This is a 1 2 3
+  test 9 45
+  good
+  ok
+  thanks bye
+  $ sed -n -e'n' -e 'p' data  ## 打印偶数行
+  test 9 45
+  ok
+q
+  说明: exit sed 
+  eg: 遇到含有两个o的行就退出
+  $ sed -n -e'p' -e'/oo/q' data 
+  This is a 1 2 3
+  test 9 45
+  good
+=
+  说明: 打印行数
+N
+  说明: 这个是将下一行读入patter内并且用newline分隔
+  eg: ## 将第二行与第一行合并
+  $ cat data 
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  10
+  $ sed -e'N' -e's/\n/ /' data 
+  1 2
+  3 4
+  5 6
+  7 8
+  9 10
+D
+  说明: 删除pattern内的第一行资料，当pattern只有一行时，作用与d相同
+p
+  说明: 打印
+h/H
+  说明: Copy/append pattern space to hold space.
+g/G
+  说明: Copy/append hold space to pattern space
+x
+  说明: Exchange the contents of the hold and pattern spaces
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p>sed Manual<br />
+Thanks!</p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-04-02</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-04-08-mysql-basic/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Mysql Basic</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-03-28-special-characters-of-shell/">
+            <span class="next-text nav-default">Special Characters of Shell</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

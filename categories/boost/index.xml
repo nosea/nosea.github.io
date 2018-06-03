@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boost on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/boost/</link>
+    <description>Recent content in Boost on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 26 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/boost/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boost PropertyTree</title>
+      <link>http://localhost:1313/post/2015-01-26-boost-propertytree/</link>
+      <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2015-01-26-boost-propertytree/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;The Property Tree library provides a data structure that stores an arbitrarily deeply nested tree of values, 
+indexed at each level by some key. 
+可以很方便的解析xml，ini，json，info文件
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Boost filesystem</title>
+      <link>http://localhost:1313/post/2015-01-26-boost-filesystem/</link>
+      <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2015-01-26-boost-filesystem/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;The Boost.Filesystem library provides facilities to manipulate files and 
+directories, and the paths that identify them.
+可移植，不用为不同平台编写不同的代码。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lexical_Cast</title>
+      <link>http://localhost:1313/post/2014-08-04-lexical-cast/</link>
+      <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2014-08-04-lexical-cast/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;数值与字符串转换之用，更方便，安全，有效。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,370 @@
     <description>Recent content in Linux on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Dec 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jan 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>linux命令tcpdump</title>
+      <link>http://localhost:1313/post/2015-01-06-linux-command-tcpdump/</link>
+      <pubDate>Tue, 06 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2015-01-06-linux-command-tcpdump/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;tcpdump命令日常使用
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令xargs</title>
+      <link>http://localhost:1313/post/2013-11-21-linux-command-xargs/</link>
+      <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-11-21-linux-command-xargs/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;xargs - build and execute command lines from standard input
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令iptables</title>
+      <link>http://localhost:1313/post/2013-11-13-linux-command-iptables/</link>
+      <pubDate>Wed, 13 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-11-13-linux-command-iptables/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;iptables — administration tool for IPv4 packet filtering and NAT
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令vmstat</title>
+      <link>http://localhost:1313/post/2013-11-10-linux-command-vmstat/</link>
+      <pubDate>Sun, 10 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-11-10-linux-command-vmstat/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;vmstat上报关于进程、内存、内存分页、阻塞IO、traps、CPU活动信息
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令top</title>
+      <link>http://localhost:1313/post/2013-11-09-linux-command-top/</link>
+      <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-11-09-linux-command-top/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;top -- display Linux tasks
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令rsync</title>
+      <link>http://localhost:1313/post/2013-10-31-linux-command-rsync/</link>
+      <pubDate>Thu, 31 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-10-31-linux-command-rsync/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;rsync —— remote sync
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令iwconfig</title>
+      <link>http://localhost:1313/post/2013-10-20-linux-command-iwconfig/</link>
+      <pubDate>Sun, 20 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-10-20-linux-command-iwconfig/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;iwconfig用于无线网络的连接
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令ps</title>
+      <link>http://localhost:1313/post/2013-05-08-linux-command-ps/</link>
+      <pubDate>Wed, 08 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-05-08-linux-command-ps/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;ps - report a snapshot of the current processes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令之cut</title>
+      <link>http://localhost:1313/post/2013-05-08-linux-command-cut/</link>
+      <pubDate>Wed, 08 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-05-08-linux-command-cut/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Print selected parts of lines from each FILE to standard output
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Use Of SecureCRT</title>
+      <link>http://localhost:1313/post/2013-04-14-use-of-securecrt/</link>
+      <pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-14-use-of-securecrt/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt; SecureCRT， sz, rz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Use virsh to manage kvm virtual machines</title>
+      <link>http://localhost:1313/post/2013-04-14-use-virsh-to-manage-kvm-virtual-machines/</link>
+      <pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-14-use-virsh-to-manage-kvm-virtual-machines/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;用virsh管理kvm虚拟机
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux下的压缩文件</title>
+      <link>http://localhost:1313/post/2013-04-13-archive-file-of-linux/</link>
+      <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-13-archive-file-of-linux/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;tar, unrar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux下中文乱码问题</title>
+      <link>http://localhost:1313/post/2013-04-09-chinese-characters-display-gibberish/</link>
+      <pubDate>Tue, 09 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-09-chinese-characters-display-gibberish/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;用cat, more, head等显示乱码的问题
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux Tool - Taskwarrior</title>
+      <link>http://localhost:1313/post/2013-04-08-linux-tool-taskwarrior/</link>
+      <pubDate>Mon, 08 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-08-linux-tool-taskwarrior/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Taskwarrior 使用笔记
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sed Basic</title>
+      <link>http://localhost:1313/post/2013-04-02-sed-basic/</link>
+      <pubDate>Tue, 02 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-04-02-sed-basic/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;sed 基础
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux命令之find</title>
+      <link>http://localhost:1313/post/2013-03-27-linux-command-find/</link>
+      <pubDate>Wed, 27 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-27-linux-command-find/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;find命令的日常使用
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cron配置</title>
+      <link>http://localhost:1313/post/2013-03-27-configure-crontab/</link>
+      <pubDate>Wed, 27 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-27-configure-crontab/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;cron详解
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>file mode of unix</title>
+      <link>http://localhost:1313/post/2013-03-27-file-mode-of-unix/</link>
+      <pubDate>Wed, 27 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-27-file-mode-of-unix/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Unix文件类型，umask，chmod，chown...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>emacs summary</title>
+      <link>http://localhost:1313/post/2013-03-25-emacs-summary/</link>
+      <pubDate>Mon, 25 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-25-emacs-summary/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Emacs 个人备忘录
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vim summary</title>
+      <link>http://localhost:1313/post/2013-03-25-vim-summary/</link>
+      <pubDate>Mon, 25 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-03-25-vim-summary/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;vim 备忘录
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Configure配置参数</title>
+      <link>http://localhost:1313/post/2013-01-18-configure-script-option/</link>
+      <pubDate>Fri, 18 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-01-18-configure-script-option/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;  每个GNU软件都应有一个名为configure的shell脚本。可以在编译之前，向这个脚本传递一些
+参数，这些参数描述了软件安装的环境(什么硬件，什么系统，安装在哪个目录之类的)。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LFS 介绍</title>
+      <link>http://localhost:1313/post/2013-01-17-introduction-to-lfs/</link>
+      <pubDate>Thu, 17 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-01-17-introduction-to-lfs/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;什么是LFS，BLFS，ALFS，CLFS，HLFS
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux版本图</title>
+      <link>http://localhost:1313/post/2013-01-17-linux-distribution-map/</link>
+      <pubDate>Thu, 17 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-01-17-linux-distribution-map/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Linux 各个版本之间的关系
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux目录结构</title>
+      <link>http://localhost:1313/post/2013-01-17-linux-directory-structure/</link>
+      <pubDate>Thu, 17 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-01-17-linux-directory-structure/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Linux系统目录结构的一些说明
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Unix/Linux相关标准</title>
+      <link>http://localhost:1313/post/2013-01-17-standards-of-linux/</link>
+      <pubDate>Thu, 17 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-01-17-standards-of-linux/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Unix/Linux相关标准介绍
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GNU 介绍</title>
+      <link>http://localhost:1313/post/2013-01-16-introduction-to-gnu/</link>
+      <pubDate>Wed, 16 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-01-16-introduction-to-gnu/</guid>
+      <description>Introduction GNU介绍和一些其他概念 GNU 1.GNU，是一个类UNIX的操作系统，GNU是&amp;quot;GNU&#39;s Not Unix&amp;quot;的缩写 2.UNIX是</description>
+    </item>
     
     <item>
       <title>Linux 实用工具 - Wget</title>

@@ -6,10 +6,56 @@
     <description>Recent content in CC&#43;&#43; on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Dec 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Jan 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/cc++/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>boost program options</title>
+      <link>http://localhost:1313/post/2015-01-25-boost-program-options/</link>
+      <pubDate>Sun, 25 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2015-01-25-boost-program-options/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;program_options主要用于方便的从命令行或者配置文件获取程序选项。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>函数返回引用</title>
+      <link>http://localhost:1313/post/2015-01-24-returning-a-reference/</link>
+      <pubDate>Sat, 24 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2015-01-24-returning-a-reference/</guid>
+      <description>Introduction 函数返回引用 Content 函数返回引用，返回的就是对象本身，不用再拷贝一次。 注意一点：不要返回局部变量的引用 Reference can a local vairables memory be accessed outside its scope</description>
+    </item>
+    
+    <item>
+      <title>《C专家编程》读书笔记(三)</title>
+      <link>http://localhost:1313/post/2013-01-04-expert-c-programming-reading-notes-three/</link>
+      <pubDate>Fri, 04 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-01-04-expert-c-programming-reading-notes-three/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;《C专家编程》第三章笔记
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《C专家编程》读书笔记(二)</title>
+      <link>http://localhost:1313/post/2013-01-02-expert-c-programming-reading-notes-two/</link>
+      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-01-02-expert-c-programming-reading-notes-two/</guid>
+      <description>Introduction 《C专家编程》第二章笔记 第2章 - 这不是bug，而是语言特性 2.1这关语言特性何事 1.在C语言中，存在一些含糊之处或近似含糊之处 2.若遇到m</description>
+    </item>
     
     <item>
       <title>《C专家编程》读书笔记(一)</title>

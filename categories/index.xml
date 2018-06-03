@@ -30,9 +30,27 @@
     </item>
     
     <item>
+      <title>Awk</title>
+      <link>http://localhost:1313/categories/awk/</link>
+      <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/awk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Boost</title>
+      <link>http://localhost:1313/categories/boost/</link>
+      <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/boost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>CC&#43;&#43;</title>
       <link>http://localhost:1313/categories/cc&#43;&#43;/</link>
-      <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/cc&#43;&#43;/</guid>
       <description></description>
@@ -48,6 +66,24 @@
     </item>
     
     <item>
+      <title>GAOE</title>
+      <link>http://localhost:1313/categories/gaoe/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/gaoe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>http://localhost:1313/categories/html/</link>
+      <pubDate>Sun, 05 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Life</title>
       <link>http://localhost:1313/categories/life/</link>
       <pubDate>Sun, 16 Dec 2012 00:00:00 +0000</pubDate>
@@ -59,25 +95,43 @@
     <item>
       <title>Linux</title>
       <link>http://localhost:1313/categories/linux/</link>
-      <pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>MySQL</title>
+      <link>http://localhost:1313/categories/mysql/</link>
+      <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Octopress</title>
       <link>http://localhost:1313/categories/octopress/</link>
-      <pubDate>Thu, 27 Dec 2012 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/octopress/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Perl</title>
+      <link>http://localhost:1313/categories/perl/</link>
+      <pubDate>Sat, 23 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>http://localhost:1313/categories/python/</link>
-      <pubDate>Mon, 31 Dec 2012 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/python/</guid>
       <description></description>
@@ -86,9 +140,27 @@
     <item>
       <title>Shell</title>
       <link>http://localhost:1313/categories/shell/</link>
-      <pubDate>Sat, 29 Dec 2012 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tcl</title>
+      <link>http://localhost:1313/categories/tcl/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/tcl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>http://localhost:1313/categories/tools/</link>
+      <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/tools/</guid>
       <description></description>
     </item>
     
@@ -98,6 +170,15 @@
       <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>http://localhost:1313/categories/windows/</link>
+      <pubDate>Sun, 25 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/windows/</guid>
       <description></description>
     </item>
     

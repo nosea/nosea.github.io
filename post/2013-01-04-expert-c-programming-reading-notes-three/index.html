@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>《C专家编程》读书笔记(三) - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction 《C专家编程》第三章笔记  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-01-04-expert-c-programming-reading-notes-three/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="《C专家编程》读书笔记(三)" />
+<meta property="og:description" content="Introduction
+
+《C专家编程》第三章笔记
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-01-04-expert-c-programming-reading-notes-three/" />
+
+
+
+<meta property="article:published_time" content="2013-01-04T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-01-04T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="《C专家编程》读书笔记(三)">
+<meta itemprop="description" content="Introduction
+
+《C专家编程》第三章笔记
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-01-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-01-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2570">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="《C专家编程》读书笔记(三)"/>
+<meta name="twitter:description" content="Introduction
+
+《C专家编程》第三章笔记
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">《C专家编程》读书笔记(三)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-01-04 </span>
+        <div class="post-category">
+            
+              <a href="/categories/cc&#43;&#43;/"> CC&#43;&#43; </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#第三章-分析c语言的声明">第三章 - 分析C语言的声明</a>
+<ul>
+<li><a href="#3-1只有编译器才会喜欢语法">3.1只有编译器才会喜欢语法</a></li>
+<li><a href="#3-2声明是如何形成的">3.2声明是如何形成的</a></li>
+<li><a href="#3-3优先级规则">3.3优先级规则</a></li>
+<li><a href="#3-4通过图表分析c语言的声明">3.4通过图表分析C语言的声明</a></li>
+<li><a href="#3-5typedef可以成为你的朋友">3.5typedef可以成为你的朋友</a></li>
+<li><a href="#3-6typedef-int-x-10-和-define-x-int-10-的区别">3.6typedef int x[10]和#define x int[10]的区别</a></li>
+<li><a href="#3-7typedef-struct-foo-的含义">3.7typedef struct foo{&hellip;;}的含义</a></li>
+<li><a href="#3-8理解所有分析过程的代码段">3.8理解所有分析过程的代码段</a></li>
+<li><a href="#3-9轻松一下">3.9轻松一下</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>《C专家编程》第三章笔记
+</code></pre>
+
+<p></p>
+
+<h1 id="第三章-分析c语言的声明">第三章 - 分析C语言的声明</h1>
+
+<h2 id="3-1只有编译器才会喜欢语法">3.1只有编译器才会喜欢语法</h2>
+
+<pre><code>Kernighan和Ritchie承认 - C语言声明的语法有时会带来严重的问题
+1.&quot;声明的形式和使用的形式相似&quot;这种用法可能是C语言的独创，其他语言并没有采取这种做法。
+   -- int *p[3] 和 使用*p[i]这样的表达式引用或使用指针
+
+   C语言的声明所存在的最大问题是你无法以一种人们所习惯的自然方式从左向右阅读一个声明
+     --&gt; 介个...我现在已经习惯了
+
+   关于指向数组的指针 -- 强制转换
+   char (*j)[20]; /* j是一个指向数组的指针，数组内有20个char元素*/
+   j = (char (*)[20])malloc(20); /*如果去掉星号两边的括号，代码会变成非法*/
+
+   涉及指针和const的声明可能会出现几种不同的顺序
+   const int *var;
+   int const *var;
+   上面两种情况下，指针所指向的对象是只读的
+   int *const var;   --&gt;这种情况下，指针是只读的
+</code></pre>
+
+<h2 id="3-2声明是如何形成的">3.2声明是如何形成的</h2>
+
+<pre><code>1.声明器 - 所有声明的核心
+  简单地说，就是标识符以及与它组合在一起的任何指针、函数括号、数组下标等。
+2.不能像下面那样声明 ??????????????
+  * 函数的返回值不能是函数，所以如foo()()是非法的
+  * 函数的返回值不能是数组，所以如foo()[]是非法的 
+  * 数组里面不能有函数，所以像foo[]()是非法的
+  但是像下面这样则是合法的 ??????????
+  * 函数的返回值允许是一个函数指针，如：int(*fun())();
+  * 函数的返回值允许是一个指向数组的指针，如：int(*foo())[]
+  * 数组里面允许有函数指针，如int(*foo[])()
+  * 数组里面允许有其他数组，如常见到的int foo[][]
+3.结构(struct)
+  结构就是一种把一些数据项组合在一起的数据结构。其他编程语言把它称为记录(record).
+  struct 结构标签(可选) --&gt;加上结构标签的目的是将来可以用struc flag 作为 struct {内容}的简写
+  {
+      类型  标识符;
+      ....
+  }变量定义(可选);
+
+  结构中也允许存在位段，无名字段以及字对齐所需填充字段。
+  struct pid_tag --&gt; 是否还记得ip的首部的定义
+  {
+      unsigned int inactive : 1;
+      unsigned int : 1;   /* 1个位的填充 */
+      unsigned int recount : 6;
+      unsigned int : 0; /* 填充到下一个边界 */
+      short pid_id;
+      ...
+  }
+  注意，也可以把一个布尔标志以位而不是字符来表示。位段的类型必须是int，unsigned int
+  或者signed int(或者加上限定符)
+  建议结构体的声明和结构体变量的声明分开，这样更有可读性
+
+  跟结构有关的参数传递问题
+  * int型变量i跟只包含一个int型成员的结构体变量s在参数传递时的方式可能完全不同
+  * 在结构中放置数组，可以把数组当作第一等级的类型，用赋值语句拷贝整个数组，以
+    传值调用的方式把它传递到函数，或者把它作为函数的返回类型
+    --&gt; 这里不就可以返回数组了吗
+4.联合(union)
+  联合在许多其他语言中被陈祚变体记录(variant record).外表与结构类似，但在内存布局上有关键区别。
+  在结构中，每个成员依次存储，在联合中，所有的成员都从偏移地址零开始存储。这样，每个
+  成员的位置都重叠在一起：在某一个时刻，只有一个成员真正存储于该地址。
+  联合的外观同结构一样，只是用关键字union代替了struct。所以，掌握了结构，基本上也掌握了联合。
+  联合一般被用来节省空间。联合也可以把同一个数据解释成两种不同的东西。
+  union bit32_tag
+  {
+      int whole; /* 一个32位的值 */
+      struct {char c0, c1, c2, c3;}byte; /* 4个8位的字节 */
+  }
+5.枚举(enum)
+  枚举通过一种简单的途径，把一串名字与一串整型值联系在一起。
+  很少有什么事情只能靠枚举来完成而用#define不能解决的，但枚举有一个优点:#define定义
+  的名字一般在编译时被丢弃，而枚举名字则通常一直在调试器中可见，可以在调试代码时使用它们。
+</code></pre>
+
+<h2 id="3-3优先级规则">3.3优先级规则</h2>
+
+<pre><code>理解C语言声明的优先级规则
+A 声明从它的名字开始读取，然后按照优先级顺序依次读取
+B 优先级从高到低依次是：
+  B.1 声明中被括号括起来的那部分
+  B.2 后缀操作符:
+      括号()表示这是一个函数，而方括号[]表示这是一个数组
+  B.3 前缀操作符：星号*表示 &quot;指向...的指针&quot;。
+C 如果const和(或)volatile关键字的后面紧跟类型说明符，那么它作用于类型说明符。在其他
+  情况下，const和(或)volatile关键字作用于它左边紧邻的指针星号。
+
+eg：char * const *(*next)();
+这个声明表示&quot;next是一个指针，它指向一个函数，该函数返回另一个指针，该指针指向一个类型
+为char的常量指针&quot;
+</code></pre>
+
+<h2 id="3-4通过图表分析c语言的声明">3.4通过图表分析C语言的声明</h2>
+
+<pre><code>还是牢记上面的规则吧，关键是后缀比前缀优先级高！括号最高。
+</code></pre>
+
+<h2 id="3-5typedef可以成为你的朋友">3.5typedef可以成为你的朋友</h2>
+
+<pre><code>为一种类型引入新的名字，而不是为变量分配空间。
+typedef类似于宏文本替换--它并没有引入新类型，而是为现有类型取个新名字。但它们之间存在关键区别。
+由于typedef看上去跟变量声明完全一样，读起来也是一样，上一节分析的技巧同样适用typedef
+一般情况下，typedef用于简洁地表示指向其他东西的指针。
+eg：signal函数
+原型：void (*signal(int sig, void(*func)))(int);
+typedef void(*ptr_to_func)(int);
+则可以表示成：ptr_to_func signal(int, ptr_to_func);
+/* 它表示signal是一个函数，他接受两个参数
+ * 其中一个是int， 另一个是ptr_to_func, 返回值为ptr_to_func
+ */
+tips:
+     不要在一个typedef中放入几个声明器
+     千万不要把typedef嵌入到声明的中间部分。
+</code></pre>
+
+<h2 id="3-6typedef-int-x-10-和-define-x-int-10-的区别">3.6typedef int x[10]和#define x int[10]的区别</h2>
+
+<pre><code>在typedef和宏文本替换之间存在一个关键性的区别。正确思考这个问题的方法就是把typedef
+看成是一种彻底&quot;封装&quot;的类型——在声明它之后不能再往里面增加别的东西。
+它和宏的区别体现在两个方面：
+1.可以用其他类型说明符对宏类型名进行扩展，但对typedef所定义的类型名却不能这样做。
+  #define peach int
+  unsigned peach i; /* 没有问题 */
+  typedef int banana;
+  unsigned banana i; /* 错误，非法 */
+2.在连续几个变量的声明中，用typedef定义的类型能够保证声明中所有的变量均为同一种类型，
+而用#define定义的类型则无法保证。
+eg：
+  #define int_ptr int *
+  int_ptr chalk, cheese;
+  扩展后变为:
+  int * chalk, cheese;  --&gt; 两种不同的类型
+</code></pre>
+
+<h2 id="3-7typedef-struct-foo-的含义">3.7typedef struct foo{&hellip;;}的含义</h2>
+
+<pre><code>不要为了方便起见对结构使用typedef。这样做的惟一好处是不必写&quot;struct&quot;,但这个关键字可以
+提示一些信息，不应该被省掉。
+typedef应该用在：
+* 数组、结构、指针以及函数的组合类型
+* 可移植类型
+</code></pre>
+
+<h2 id="3-8理解所有分析过程的代码段">3.8理解所有分析过程的代码段</h2>
+
+<h2 id="3-9轻松一下">3.9轻松一下</h2>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-01-04</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-01-16-introduction-to-gnu/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">GNU 介绍</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-01-02-expert-c-programming-reading-notes-two/">
+            <span class="next-text nav-default">《C专家编程》读书笔记(二)</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

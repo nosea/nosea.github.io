@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" />
+<meta name="author" content="nosea" />
   <meta name="description" content="1.安装jQuery 1.1 下载 {% codeblock %} wget -c http://code.jquery.com/jquery-1.8.3.min.js wget -c http://fuelyourcoding.com/scripts/toc/jquery.toc.zip &amp;lt;!-- more --&amp;gt; ## 1.2 安装 I.将jquery-1.8.3.min.js放置于source/javascrip" />
 
   <meta name="keywords" content="Hugo, theme, even" />
@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2012-12-27T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2012-12-27T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="896">
+<meta itemprop="wordCount" content="848">
 
 
 
@@ -201,19 +201,16 @@ wget -c <a href="http://fuelyourcoding.com/scripts/toc/jquery.toc.zip">http://fu
 ## 1.3 配置
 I.修改source/_includes/custom/head.html，添加下面的内容
 ``` bash`
-{% raw %}
 &lt;script src=&quot;{{ root_url }}/javascripts/jquery-1.8.3.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;{{ root_url }}/javascripts/jquery.tableofcontents.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 	  jQuery.noConflict();
 &lt;/script&gt;
 &lt;script src=&quot;{{ root_url }}/javascripts/generate-toc.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-{% endraw %}
 </code></pre>
 
 <p>II.把下面的内容保存为generate-toc.js放置于source/javascripts/目录
 {% codeblock generate-toc.js lang:js %}
-{% raw %}
 function generateTOC(insertBefore, heading) {
   var container = jQuery(&rdquo;<div id='tocBlock'></div>&rdquo;);
   var div = jQuery(&rdquo;<ul id='toc'></ul>&rdquo;);
@@ -226,12 +223,10 @@ function generateTOC(insertBefore, heading) {
 <p>div.tableOfContents(content);
   container.append(div);
   container.insertBefore(insertBefore);
-}
-{% endraw %}</p>
+}</p>
 
 <pre><code>III.在source/_includes/custom/after_footer.html文件里添加如下内容
 ``` bash`
-{% raw %}
 {% comment %}
 ------------------------------------------------------------------------------
 Table of contents generator
@@ -251,12 +246,10 @@ jQuery(document).ready(function() {
 });
 &lt;/script&gt;
 {% endif %}
-{% endraw %}
 </code></pre>
 
 <p>IV.将下面内容保存为_mixins.scss放置于sass/custom/目录下
 {% codeblock lang:css %}
-{% raw %}
 @mixin rounded-border($radius: 10px) {
     border-radius: $radius;
     -moz-border-radius: $radius;
@@ -273,19 +266,15 @@ jQuery(document).ready(function() {
     box-shadow: $width $width $width $color;
     -moz-box-shadow: $width $width $width $color;
     -webkit-box-shadow: $width $width $width $color;
-}
-{% endraw %}</p>
+}</p>
 
 <pre><code>V.然后修改sass/custom/_styles.scss添加如下内容
 {% codeblock lang:css %}
-{% raw %}
 @import &quot;mixins&quot;;
-{% endraw %}
 </code></pre>
 
 <p>VI.将下面内容保存为_screen.scss放置于sass/custom/目录下
 {% codeblock lang:css %}
-{% raw %}
 $toc-bg: #dfdfdf;</p>
 
 <p>$toc-incr: 5px;</p>
@@ -322,12 +311,10 @@ margin: 0 0 10px 15px;
 }
 </code></pre>
 
-<p>}
-{% endraw %}</p>
+<p>}</p>
 
 <pre><code>VII.保存下面内容为_print.scss放置于sass/custom/
 {% codeblock lang:css %}
-{% raw %}
 @import &quot;mixins&quot;;
 
 $toc-incr: 1em;
@@ -359,15 +346,12 @@ div#tocBlock {
         }
     }
 }
-{% endraw %}
 </code></pre>
 
 <p>VIII.在sass/screen.scss里添加如下内容
 {% codeblock lang:css %}
-{% raw %}
 @import &ldquo;custom/screen&rdquo;;
-@import &ldquo;custom/print&rdquo;;
-{% endraw %}</p>
+@import &ldquo;custom/print&rdquo;;</p>
 
 <pre><code># 2.使用
 设置toc为true即可
@@ -375,10 +359,10 @@ div#tocBlock {
 
 <p>layout: post
 title: &ldquo;Table of Contents in Octopress&rdquo;
+author: &ldquo;nosea&rdquo;
 date: &ldquo;2012-12-27&rdquo;
 comments: true
 categories: Octopress
-toc: true
 ```</p>
 
 <h1 id="3-reference">3.Reference</h1>
@@ -394,7 +378,7 @@ Thanks!</li>
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">olOwOlo</span>
+    <span class="item-content">nosea</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>

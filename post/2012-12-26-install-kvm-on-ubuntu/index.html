@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" />
+<meta name="author" content="nosea" />
   <meta name="description" content="Install Necessary Packages sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils Add Users to Groups sudo adduser `id -un` libvirtd Verify Installation virsh -c qemu:///system list Install virt-manager (graphical user interface) sudo apt-get install virt-manager Creating virtual machines #!/bin/bash set -x sudo virt-install \ --connect qemu:///system \ --name ubuntu \ --ram 1024 \ --disk path=/var/lib/libvirt/images/ubuntu.img,size=15 \ --network network:default \ --cdrom=/path-to-iso-file/ubuntu-12.04-desktop-i386.iso \ --os-variant=ubuntuprecise \ --accelerate Cloning a virtual machine virt-clone -o ubuntu" />
 
   <meta name="keywords" content="Hugo, theme, even" />
@@ -254,7 +254,7 @@ solution: sudo virt-manager运行manager，然后在manager里就可以看到.
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">olOwOlo</span>
+    <span class="item-content">nosea</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>

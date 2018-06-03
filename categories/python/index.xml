@@ -6,10 +6,80 @@
     <description>Recent content in Python on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 31 Dec 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python多线程无法接收Keyboard interrupt信号</title>
+      <link>http://localhost:1313/post/2013-10-11-python-multithread-kill/</link>
+      <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-10-11-python-multithread-kill/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;如何让线程相应Keyborad interrupt信号
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python中文编码问题</title>
+      <link>http://localhost:1313/post/2013-10-10-python-code-problem/</link>
+      <pubDate>Thu, 10 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-10-10-python-code-problem/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;因折腾过好几次python在中文的处理乱码的情况，特此记录
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python note I</title>
+      <link>http://localhost:1313/post/2013-02-04-python-note-i/</link>
+      <pubDate>Mon, 04 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-02-04-python-note-i/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;Dictionary, List, Tuple
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python docstring</title>
+      <link>http://localhost:1313/post/2013-02-02-python-docstring/</link>
+      <pubDate>Sat, 02 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-02-02-python-docstring/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;docstring 使用
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python标准库configparser</title>
+      <link>http://localhost:1313/post/2013-02-01-python-stdlib-configparser/</link>
+      <pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-02-01-python-stdlib-configparser/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;模块作用：读取/写入配置文件
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>python编码规范</title>

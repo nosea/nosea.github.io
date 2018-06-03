@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GAOE on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/gaoe/</link>
+    <description>Recent content in GAOE on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/gaoe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>shell trap</title>
+      <link>http://localhost:1313/post/2013-12-02-shell-trap/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-12-02-shell-trap/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;有些错误犯一次就够了
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Raid</title>
+      <link>http://localhost:1313/post/2013-11-02-raid/</link>
+      <pubDate>Sat, 02 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-11-02-raid/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;RAID,独立磁盘冗余数组（Redundant Array of Independent Disks），也称磁盘阵列。
+它通过RAID Controller将多块磁盘虚拟为大容量的磁盘使用，提供了更高的存储性能。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GAOE：术语</title>
+      <link>http://localhost:1313/post/2013-07-07-gaoe-terminology/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2013-07-07-gaoe-terminology/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;各种运维术语
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

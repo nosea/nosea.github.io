@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>file mode of unix - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction Unix文件类型，umask，chmod，chown...  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2013-03-27-file-mode-of-unix/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="file mode of unix" />
+<meta property="og:description" content="Introduction
+
+Unix文件类型，umask，chmod，chown...
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2013-03-27-file-mode-of-unix/" />
+
+
+
+<meta property="article:published_time" content="2013-03-27T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-03-27T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="file mode of unix">
+<meta itemprop="description" content="Introduction
+
+Unix文件类型，umask，chmod，chown...
+
+
+">
+
+
+<meta itemprop="datePublished" content="2013-03-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2013-03-27T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2048">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="file mode of unix"/>
+<meta name="twitter:description" content="Introduction
+
+Unix文件类型，umask，chmod，chown...
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">file mode of unix</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-03-27 </span>
+        <div class="post-category">
+            
+              <a href="/categories/linux/"> Linux </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#基础知识">基础知识</a>
+<ul>
+<li><a href="#unix系统文件类型">UNIX系统文件类型</a></li>
+<li><a href="#文件访问权限">文件访问权限</a></li>
+<li><a href="#关于软链接和硬链接">关于软链接和硬链接</a></li>
+<li><a href="#权限位显示">权限位显示</a></li>
+</ul></li>
+<li><a href="#常用命令">常用命令</a>
+<ul>
+<li><a href="#id">id</a></li>
+<li><a href="#umask">umask</a></li>
+<li><a href="#chmod">chmod</a></li>
+<li><a href="#chown">chown</a></li>
+<li><a href="#chgrp">chgrp</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>Unix文件类型，umask，chmod，chown...
+</code></pre>
+
+<p></p>
+
+<h1 id="基础知识">基础知识</h1>
+
+<h2 id="unix系统文件类型">UNIX系统文件类型</h2>
+
+<pre><code>1.普通文件(regular file)
+  最常用文件类型，这种文件包含了某种形式的数据，至于是文本还是二进制数据对于内核并无区别。
+  对于普通文件内容的解释由处理该文件的应用程序执行。
+  一个例外是：二进制可执行文件。为了执行程序，内核必须理解其格式。所有二进制可执行文件都
+  遵循一种格式。这种格式使内核能够确定程序文本和数据的加载位置。
+2.目录文件(directory file)
+  这种文件包含了其他文件的名字以及指向与这些文件有关信息的指针。
+  对一个目录具有读权限的任一进程都可以读该目录的内容，但只有内核可以直接写目录文件。
+3.块特殊文件(block special file)
+  这种文件类型提供对设备(例如磁盘)带缓冲的访问，每次访问以固定长度为单位进行。
+4.字符特殊文件(character special file)
+  这种文件类型提供对设备不带缓冲的访问，每次访问长度可变，
+  系统中的所有设备要么是字符特殊文件，要么是块特殊文件。
+5.FIFO
+  这种类型文件用于进程间通信，有时也将其称为命名管道(named pipe)。
+6.套接字(socket)
+  这种文件类型用于进程间的网络通信。套接字也可用于在一台宿主机上进程之间的非网络通信。
+7.符号链接(symbolic link)
+  这种文件类型指向另一个文件。
+8.相应的显示  
+  d        目录
+  l        符号链接
+  s        套接字文件
+  b        块设备文件
+  c        字符设备文件
+  p        命名管道文件
+  -        不属于以上几种类型的文件
+</code></pre>
+
+<h2 id="文件访问权限">文件访问权限</h2>
+
+<pre><code>所有文件类型(目录文件，字符特别文件)都有访问权限(access permission)。
+1.第一个规则
+  用名字打开任一文件时，对该名字中包含的每一个目录，包括它可能隐含的当前工作目录
+  都应该具有执行权限。
+  这就是为什么对于目录其执行权限位常被称为搜索位的原因。
+  eg：为了打开文件/usr/include/stdio.h ， 需要对目录/ ，/usr ， /usr/include 
+      具有执行权限。然后需要对该文件本身具有适当权限。
+  注意：对于目录的读权限和执行权限的意义是不同的。读权限允许我们读目录，获得该目录中
+        所有文件名的列表。当一个目录是我们要访问文件的路径名的一个组成部分时，对该目
+        录的执行权限使我们可以通过该目录(也就是搜索该目录，寻找特定文件名)。
+2.对于一个文件的读权限决定了是否可以打开这个文件。
+3.对于一个文件的写权限决定了是否可以打开文件进行写操作。
+4.为了在一个目录中创建一个新文件，必须对该目录具有写权限和执行权限。
+5.为了删除一个现有文件，必须对包含该文件的目录具有写权限和执行权限。对文件本身则不需要有读写权限。
+</code></pre>
+
+<h2 id="关于软链接和硬链接">关于软链接和硬链接</h2>
+
+<pre><code>软链接  -  快捷方式
+硬链接  -  别名， 备份文件， 不占用空间， 不能创建目录的硬链接。
+类比(当然实际不是这样)
+  Linux下所有的文件名都是指针，指向文件具体存放的位置。
+  创建硬链接 - 相当于复制了这个指针，因此两个指针指向同一地址。也就是说两个文件名指向完全相同的文件。
+  创建软链接 - 相当于创建了一个指向指针的指针，因此当被指对象删除时就失效了。
+</code></pre>
+
+<h2 id="权限位显示">权限位显示</h2>
+
+<pre><code>-rw-rw-r--       ---&gt; 新创建的文件
+第一个横杠: 指定文件类型
+剩下的9个字符分别对应9个权限位
+rw-      前三位，设定文件属主权限，这里是可读、写
+rw-      中三位，设定组用户权限，这里是可读、写
+r--      后三位，设定其他用户权限，这里是只可读
+与八进制换算
+r w x: 4 + 2 + 1
+</code></pre>
+
+<h1 id="常用命令">常用命令</h1>
+
+<h2 id="id">id</h2>
+
+<pre><code>这个可以查看user的id，组id等相关信息
+</code></pre>
+
+<h2 id="umask">umask</h2>
+
+<pre><code>创建文件的默认权限由umask指定,umask设置的是权限的补码
+如umask值为022，则默认目录权限为777-022=755,默认文件权限为666-022=644
+对于目录:
+r  可以列出该目录中的文件
+w  可以在该目录中创建或删除文件
+x  可以搜索或进入该目录
+eg: $ umask
+0002    #  前面多了一个0是suid/guid的
+</code></pre>
+
+<h2 id="chmod">chmod</h2>
+
+<pre><code>格式
+chmod [who] operator [permission] filename
+eg: chmod 755 xxx
+    chmod u+rw xxx   # u-rw  u=rw
+who
+   u     创建者
+   g     组
+   o     其他人
+   a     所有人
+operator
+   +     增加权限
+   -     取消权限
+   =     设定权限
+permission
+   r     读
+   w     写
+   x     执行
+   s     创建者和组set-ID
+   t     粘性位*
+   l     给文件加锁
+   u,g,o 针对文件属主，属组和其他用户的操作。
+注:
+  在列文件或者目录时，有时会遇到&quot;t&quot;位,这个是为了文件共享设置的。
+  1、如果目录出现了这个，意味着该目录中的文件只有创建者
+     才可以删除，即使组成员和属主有同等的权限，如/tmp目录
+  2、如果文件看到&quot;t&quot;，主要是为文件共享设置
+  3、i权限，就是不可修改权限，例如chattr +i file，那么file文件就
+     不可以修改，无论是谁，删除用-i  # 注意，这里必须用root用执行
+     否则会报chattr: Operation not permitted while setting flags on file的错误
+  4、suid  guid
+     suid的作用就是让本来没有相应权限的用户执行这个程序时，可以访问他没有权限的资源
+     如passwd
+  5、设置suid：将相应的权限位之前的那一位设置为4
+     eg: chmod 4755 file
+     或者:
+     chmod u+s
+     设置guid：将相应的权限位之前的那一位设置为2
+     eg: chmod 2755 file
+     都设置:
+     eg: chmod 6755 file
+</code></pre>
+
+<h2 id="chown">chown</h2>
+
+<pre><code>chown -R -h owner file
+-R   对所有子目录下的文件都进行同样的操作
+-h   在改变符号链接文件时不影响该链接所指向的目标文件
+eg:
+chown -R user:user dirname
+chown user file
+</code></pre>
+
+<h2 id="chgrp">chgrp</h2>
+
+<pre><code>chgrp xxx file
+</code></pre>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="http://bbs.chinaunix.net/thread-434579-1-1.html">类UNIX系统基础：文件安全与权限</a></p>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2013-03-27</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2013-03-27-configure-crontab/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">cron配置</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2013-03-26-awk-skills/">
+            <span class="next-text nav-default">Awk Skills</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

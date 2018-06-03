@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>bash tips - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="nosea" />
+  <meta name="description" content="Introduction long time tips  
+" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2014-08-31-bash-tips/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="bash tips" />
+<meta property="og:description" content="Introduction
+
+long time tips
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2014-08-31-bash-tips/" />
+
+
+
+<meta property="article:published_time" content="2014-08-31T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-08-31T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="bash tips">
+<meta itemprop="description" content="Introduction
+
+long time tips
+
+
+">
+
+
+<meta itemprop="datePublished" content="2014-08-31T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-08-31T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="211">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="bash tips"/>
+<meta name="twitter:description" content="Introduction
+
+long time tips
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">bash tips</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-08-31 </span>
+        <div class="post-category">
+            
+              <a href="/categories/shell/"> Shell </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#content">Content</a>
+<ul>
+<li><a href="#logging-in-file">logging in file</a></li>
+<li><a href="#function-decorator">function decorator</a></li>
+<li><a href="#reverse-the-order-of-lines-in-a-file">reverse the order of lines in a file</a></li>
+<li><a href="#exit-shell-script-from-a-subshell">exit shell script from a subshell</a>
+<ul>
+<li><a href="#use-kill-or-kill-0">use kill &amp;&amp; or kill 0</a></li>
+<li><a href="#use-set-e-and-trap">use set -E and trap</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <h1 id="introduction">Introduction</h1>
+
+<pre><code>long time tips
+</code></pre>
+
+<p></p>
+
+<h1 id="content">Content</h1>
+
+<h2 id="logging-in-file">logging in file</h2>
+
+<pre><code class="language-bash">export _LOG_FILE=&quot;test.log&quot;
+export _INFO_FLAG=&quot;[INFO]&quot;
+export _ERROR_FLAG=&quot;[ERROR]&quot;
+export _LOG_FORMAT=&quot;%Y-%m-%d %H:%M:%S&quot;
+
+LOG_INFO()
+{
+    echo $(date +&quot;${_LOG_FORMAT} ${_INFO_FLAG} (${BASH_SOURCE[1]##*/}:${BASH_LINENO[0]}) &quot;) $* &gt;&gt; $_LOG_FILE
+}
+
+LOG_ERROR()
+{
+    echo $(date +&quot;${_LOG_FORMAT} ${_ERROR_FLAG} (${BASH_SOURCE[1]##*/}:${BASH_LINENO[0]}) &quot;) $* &gt;&gt; $_LOG_FILE
+}
+</code></pre>
+
+<h2 id="function-decorator">function decorator</h2>
+
+<pre><code class="language-bash">export _ERROR_LOG=&quot;err.log&quot;
+RUN()
+{
+    # every function will append some infomation to debug or logging
+    local _func=&quot;$1&quot;; shift 1
+
+    echo &quot;start ${_func} ...&quot;
+    # run the function 
+    ${_func} $@ 2&gt;&gt;${_ERROR_LOG}
+
+    # logging
+    echo &quot;done ${_func} ...&quot;
+}
+
+test()
+{
+    echo &quot;param is :&quot; $@
+}
+</code></pre>
+
+<h2 id="reverse-the-order-of-lines-in-a-file">reverse the order of lines in a file</h2>
+
+<pre><code>1、use command tac
+   tac filename
+2、sed tricks
+   sed '1!G;h;$!d' filename
+   sed -n '1!G;h;$p' filename
+3、pelr
+   perl -e 'print reverse &lt;&gt;' filename
+</code></pre>
+
+<h2 id="exit-shell-script-from-a-subshell">exit shell script from a subshell</h2>
+
+<h3 id="use-kill-or-kill-0">use kill &amp;&amp; or kill 0</h3>
+
+<pre><code class="language-bash">sub_proc()
+{
+    echo &quot;start sub process...&quot;
+    kill $$
+	# the same as kill 0
+	# for detail see kill(2) manpage
+}
+
+base_proc()
+{
+    var=$(sub_proc)
+    echo &quot;this will never be printed&quot;
+}
+
+base_proc
+</code></pre>
+
+<h3 id="use-set-e-and-trap">use set -E and trap</h3>
+
+<pre><code class="language-bash">#!/bin/bash
+set -E # -E  If set, the ERR trap is inherited by shell functions
+trap '[ &quot;$?&quot; -eq 99 ] &amp;&amp; exit 99' ERR
+sub_proc()
+{
+    echo &quot;start sub process...&quot;
+    exit 99 
+}
+
+base_proc()
+{
+    var=$(sub_proc)
+    echo &quot;this will never be printed&quot;
+}
+
+base_proc
+</code></pre>
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">nosea</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2014-08-31</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2014-12-16-install-octopress-on-mac/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">在mac上安装octopress</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2014-08-04-lexical-cast/">
+            <span class="next-text nav-default">Lexical_Cast</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
