@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Django笔记 - 开始Django - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" />
+  <meta name="description" content="一.到官网下载最新稳定版,关于哪个版本好, 官网右侧有说明，安装 Linux tar xzvf Django-1.4.3.tar.gz cd Django-1.4.3 sudo python setup.py install Windows If you&amp;rsquo;re using Windows, start a command shell with administrator privileges and run the command python setup.py install 安装好后，检查下 $ python" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2012-12-18-notes-of-start-django/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Django笔记 - 开始Django" />
+<meta property="og:description" content="一.到官网下载最新稳定版,关于哪个版本好, 官网右侧有说明，安装 Linux tar xzvf Django-1.4.3.tar.gz cd Django-1.4.3 sudo python setup.py install Windows If you&rsquo;re using Windows, start a command shell with administrator privileges and run the command python setup.py install 安装好后，检查下 $ python" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2012-12-18-notes-of-start-django/" />
+
+
+
+<meta property="article:published_time" content="2012-12-18T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-12-18T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Django笔记 - 开始Django">
+<meta itemprop="description" content="一.到官网下载最新稳定版,关于哪个版本好, 官网右侧有说明，安装 Linux tar xzvf Django-1.4.3.tar.gz cd Django-1.4.3 sudo python setup.py install Windows If you&rsquo;re using Windows, start a command shell with administrator privileges and run the command python setup.py install 安装好后，检查下 $ python">
+
+
+<meta itemprop="datePublished" content="2012-12-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2012-12-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="371">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Django笔记 - 开始Django"/>
+<meta name="twitter:description" content="一.到官网下载最新稳定版,关于哪个版本好, 官网右侧有说明，安装 Linux tar xzvf Django-1.4.3.tar.gz cd Django-1.4.3 sudo python setup.py install Windows If you&rsquo;re using Windows, start a command shell with administrator privileges and run the command python setup.py install 安装好后，检查下 $ python"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Django笔记 - 开始Django</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-12-18 </span>
+        <div class="post-category">
+            
+              <a href="/categories/django/"> Django </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>一.到<a href="https://www.djangoproject.com/">官网</a>下载最新稳定版,关于哪个版本好, 官网右侧有说明，安装<br />
+Linux</p>
+
+<pre><code class="language-bash">tar xzvf Django-1.4.3.tar.gz
+cd Django-1.4.3
+sudo python setup.py install
+</code></pre>
+
+<p>Windows
+     If you&rsquo;re using Windows, start a command shell with administrator privileges
+     and run the command python setup.py install
+安装好后，检查下</p>
+
+<pre><code class="language-bash">$ python
+&gt;&gt;&gt; import django
+&gt;&gt;&gt; django.VERSION
+</code></pre>
+
+<!-- more -->
+
+<p>二.新建一个项目
+    1.在想要新建项目的地方运行命令
+      django-admin.py startproject project_name
+      $ django-admin.py startproject mydjsite
+      $ ls
+      manage.py  mydjsite
+      mydjsite目录里包含
+      <strong>init</strong>.py  <strong>init</strong>.pyc  settings.py  settings.pyc  urls.py  urls.pyc  wsgi.py  wsgi.pyc文件
+      关于这些文件:
+      *  <strong>init</strong>.py ：让 Python 把该目录当成一个开发包 (即一组模块)所需的文件。
+      *  manage.py ：一种命令行工具，可让你以多种方式与该 Django 项目进行交互。
+      *  settings.py ：该 Django 项目的设置或配置。
+      *  urls.py ：该 Django 项目的 URL 声明，即 Django 所支撑站点的内容列表
+    2.开发服务器 - 调试的话，默认即可
+       $ python manage.py runserver<br />
+       如要更改主机或端口
+       $ python manage.py runserver 8080   # 默认是8000
+       改变服务器监听的 IP 地址。要和其他开发人员共享同一开发站点的话，该功能特别有用
+       # 下面会让 Django 监听所有网络接口，因此也就让其它电脑可连接到开发服务器了
+       $ python manage.py runserver 0.0.0.0:8080</p>
+
+<p>学习书籍:<br />
+   <a href="http://djangobook.py3k.cn/">The Django Book</a></p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2012-12-18</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2012-12-19-android-layout/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Android的布局</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2012-12-18-views-and-urlconfs-of-django/">
+            <span class="next-text nav-default">Django笔记-视图和URL配置</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

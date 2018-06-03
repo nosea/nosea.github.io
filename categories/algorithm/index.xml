@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/algorithm/</link>
+    <description>Recent content in Algorithm on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>排序算法</title>
+      <link>http://localhost:1313/post/2012-12-14-algorithm-sort/</link>
+      <pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-14-algorithm-sort/</guid>
+      <description>一.插入排序 1.直接插入排序 基本思路: 依次把待排序的的记录逐一按照关键字的大小插入到已经排好的有序序列中。 复杂度：O(n^2) 稳定的排序方法</description>
+    </item>
+    
+  </channel>
+</rss>

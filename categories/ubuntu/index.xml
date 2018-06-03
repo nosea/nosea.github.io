@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/ubuntu/</link>
+    <description>Recent content in Ubuntu on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu Error Log</title>
+      <link>http://localhost:1313/post/2012-12-28-ubuntu-error-log/</link>
+      <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-28-ubuntu-error-log/</guid>
+      <description>error list 1. E: Unable to locate package xxxxxx # version: 12.04 # lang: en sudo apt-get install phpmyadmin Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package phpmyadmin 分析: 1.如果修改了source.list还没有update，请up</description>
+    </item>
+    
+    <item>
+      <title>在ubuntu上安装kvm</title>
+      <link>http://localhost:1313/post/2012-12-26-install-kvm-on-ubuntu/</link>
+      <pubDate>Wed, 26 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-26-install-kvm-on-ubuntu/</guid>
+      <description>Install Necessary Packages sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils Add Users to Groups sudo adduser `id -un` libvirtd Verify Installation virsh -c qemu:///system list Install virt-manager (graphical user interface) sudo apt-get install virt-manager Creating virtual machines #!/bin/bash set -x sudo virt-install \ --connect qemu:///system \ --name ubuntu \ --ram 1024 \ --disk path=/var/lib/libvirt/images/ubuntu.img,size=15 \ --network network:default \ --cdrom=/path-to-iso-file/ubuntu-12.04-desktop-i386.iso \ --os-variant=ubuntuprecise \ --accelerate Cloning a virtual machine virt-clone -o ubuntu</description>
+    </item>
+    
+  </channel>
+</rss>

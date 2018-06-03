@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/android/</link>
+    <description>Recent content in Android on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android的布局</title>
+      <link>http://localhost:1313/post/2012-12-19-android-layout/</link>
+      <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-19-android-layout/</guid>
+      <description>一.关于一些属性 android:id - 为控件指定id android:text - 指定控件中显示的文字，这里尽量用string.xml android:gravity - 指定控件中的内容的基本位置，比如居中，居右 android:textSize -</description>
+    </item>
+    
+    <item>
+      <title>Activity的切换</title>
+      <link>http://localhost:1313/post/2012-12-16-switch-to-another-activity/</link>
+      <pubDate>Sun, 16 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-16-switch-to-another-activity/</guid>
+      <description>一.同个Activity的view 1.添加view在布局文件中添加，一般注意宽高属性 layout_width, layout_height 有fill_parent，wrap_content，</description>
+    </item>
+    
+    <item>
+      <title>Activity 生命周期</title>
+      <link>http://localhost:1313/post/2012-12-14-activity-lifecycle/</link>
+      <pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-14-activity-lifecycle/</guid>
+      <description>一.基本生命周期 {% img /image_tag/basic-lifecycle.png %} 关于各种状态的说明 Resumed In this state, the activity is in the foreground and the user can interact with it. (Also sometimes referred to as the &amp;ldquo;running&amp;rdquo; state.) Paused In this state, the activity is partially obscured by another activity—the other</description>
+    </item>
+    
+    <item>
+      <title>Android的用户界面</title>
+      <link>http://localhost:1313/post/2012-12-12-user-interface-of-android/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-12-user-interface-of-android/</guid>
+      <description>一.概览 The graphical user interface for an Android app is built using a hierarchy of View and ViewGroup objects. View objects are usually UI widgets such as buttons or text fields and ViewGroup objects are invisible view containers that define how the child views are laid out, such as in a grid or a vertical list. All user interface elements in an Android app are built using</description>
+    </item>
+    
+    <item>
+      <title>Android的一些基本概念</title>
+      <link>http://localhost:1313/post/2012-12-11-basic-knowledge-of-android/</link>
+      <pubDate>Tue, 11 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-11-basic-knowledge-of-android/</guid>
+      <description>一.Android的体系架构 from: App Framework {% img /image_tag/system-architecture.jpg %} 二.四个很重要的组件 1.Activity 可以看成容器，构造应用程序界面，里面可以放置各种控件。 2.Intent 在Activity之</description>
+    </item>
+    
+    <item>
+      <title>在win7上搭建Android开发环境</title>
+      <link>http://localhost:1313/post/2012-12-10-setup-android-development-environment-on-windows-7/</link>
+      <pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-10-setup-android-development-environment-on-windows-7/</guid>
+      <description>一.System Requirements, 来自官方文档 *Eclipse IDE *Eclipse 3.6.2 (Helios) or greater *Note: Eclipse 3.5 (Galileo) is no longer supported with the latest version of ADT. *Eclipse JDT plugin (included in most Eclipse IDE packages) *JDK 6 (JRE alone is not sufficient) *Android Development Tools plugin (recommended) *Not compatible with GNU Compiler for Java (gcj) 二.安装J</description>
+    </item>
+    
+  </channel>
+</rss>

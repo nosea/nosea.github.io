@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Table of Contents in Octopress - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" />
+  <meta name="description" content="1.安装jQuery 1.1 下载 {% codeblock %} wget -c http://code.jquery.com/jquery-1.8.3.min.js wget -c http://fuelyourcoding.com/scripts/toc/jquery.toc.zip &amp;lt;!-- more --&amp;gt; ## 1.2 安装 I.将jquery-1.8.3.min.js放置于source/javascrip" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2012-12-27-table-of-contents-in-octopress/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Table of Contents in Octopress" />
+<meta property="og:description" content="1.安装jQuery 1.1 下载 {% codeblock %} wget -c http://code.jquery.com/jquery-1.8.3.min.js wget -c http://fuelyourcoding.com/scripts/toc/jquery.toc.zip &lt;!-- more --&gt; ## 1.2 安装 I.将jquery-1.8.3.min.js放置于source/javascrip" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2012-12-27-table-of-contents-in-octopress/" />
+
+
+
+<meta property="article:published_time" content="2012-12-27T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-12-27T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Table of Contents in Octopress">
+<meta itemprop="description" content="1.安装jQuery 1.1 下载 {% codeblock %} wget -c http://code.jquery.com/jquery-1.8.3.min.js wget -c http://fuelyourcoding.com/scripts/toc/jquery.toc.zip &lt;!-- more --&gt; ## 1.2 安装 I.将jquery-1.8.3.min.js放置于source/javascrip">
+
+
+<meta itemprop="datePublished" content="2012-12-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2012-12-27T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="896">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Table of Contents in Octopress"/>
+<meta name="twitter:description" content="1.安装jQuery 1.1 下载 {% codeblock %} wget -c http://code.jquery.com/jquery-1.8.3.min.js wget -c http://fuelyourcoding.com/scripts/toc/jquery.toc.zip &lt;!-- more --&gt; ## 1.2 安装 I.将jquery-1.8.3.min.js放置于source/javascrip"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Table of Contents in Octopress</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-12-27 </span>
+        <div class="post-category">
+            
+              <a href="/categories/octopress/"> Octopress </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#1-安装jquery">1.安装jQuery</a>
+<ul>
+<li><a href="#1-1-下载">1.1 下载</a></li>
+</ul></li>
+<li><a href="#3-reference">3.Reference</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="1-安装jquery">1.安装jQuery</h1>
+
+<h2 id="1-1-下载">1.1 下载</h2>
+
+<p>{% codeblock %}
+wget -c <a href="http://code.jquery.com/jquery-1.8.3.min.js">http://code.jquery.com/jquery-1.8.3.min.js</a>
+wget -c <a href="http://fuelyourcoding.com/scripts/toc/jquery.toc.zip">http://fuelyourcoding.com/scripts/toc/jquery.toc.zip</a></p>
+
+<pre><code>&lt;!-- more --&gt;
+## 1.2 安装
+    I.将jquery-1.8.3.min.js放置于source/javascripts/目录
+	II.将jquery.toc.zip解压,取出jquery.tableofcontents.min.js
+	   同样放置于source/javascripts/目录
+## 1.3 配置
+I.修改source/_includes/custom/head.html，添加下面的内容
+``` bash`
+{% raw %}
+&lt;script src=&quot;{{ root_url }}/javascripts/jquery-1.8.3.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;{{ root_url }}/javascripts/jquery.tableofcontents.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	  jQuery.noConflict();
+&lt;/script&gt;
+&lt;script src=&quot;{{ root_url }}/javascripts/generate-toc.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+{% endraw %}
+</code></pre>
+
+<p>II.把下面的内容保存为generate-toc.js放置于source/javascripts/目录
+{% codeblock generate-toc.js lang:js %}
+{% raw %}
+function generateTOC(insertBefore, heading) {
+  var container = jQuery(&rdquo;<div id='tocBlock'></div>&rdquo;);
+  var div = jQuery(&rdquo;<ul id='toc'></ul>&rdquo;);
+  var content = $(insertBefore).first();</p>
+
+<p>if (heading != undefined &amp;&amp; heading != null) {
+    container.append(&rsquo;<span class="tocHeading">&rsquo; + heading + &lsquo;</span>&rsquo;);
+  }</p>
+
+<p>div.tableOfContents(content);
+  container.append(div);
+  container.insertBefore(insertBefore);
+}
+{% endraw %}</p>
+
+<pre><code>III.在source/_includes/custom/after_footer.html文件里添加如下内容
+``` bash`
+{% raw %}
+{% comment %}
+------------------------------------------------------------------------------
+Table of contents generator
+------------------------------------------------------------------------------
+{% endcomment %}
+
+{% if index %}
+  {% comment %}
+  No table of contents on the index page.
+  {% endcomment %}
+
+{% elsif page.toc == true %}
+&lt;script type=&quot;text/javascript&quot;&gt;
+jQuery(document).ready(function() {
+  // Put a TOC right before the entry content.
+  generateTOC('.entry-content', 'Table of Contents');
+});
+&lt;/script&gt;
+{% endif %}
+{% endraw %}
+</code></pre>
+
+<p>IV.将下面内容保存为_mixins.scss放置于sass/custom/目录下
+{% codeblock lang:css %}
+{% raw %}
+@mixin rounded-border($radius: 10px) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+   padding: $radius;
+}</p>
+
+<p>@mixin centered($width: auto) {
+    width: $width !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}</p>
+
+<p>@mixin drop-shadow-right-bottom($width: 5px, $color: #999) {
+    box-shadow: $width $width $width $color;
+    -moz-box-shadow: $width $width $width $color;
+    -webkit-box-shadow: $width $width $width $color;
+}
+{% endraw %}</p>
+
+<pre><code>V.然后修改sass/custom/_styles.scss添加如下内容
+{% codeblock lang:css %}
+{% raw %}
+@import &quot;mixins&quot;;
+{% endraw %}
+</code></pre>
+
+<p>VI.将下面内容保存为_screen.scss放置于sass/custom/目录下
+{% codeblock lang:css %}
+{% raw %}
+$toc-bg: #dfdfdf;</p>
+
+<p>$toc-incr: 5px;</p>
+
+<p>div#tocBlock {
+    @include drop-shadow-right-bottom(5px, #999);
+    @include rounded-border(10px);
+    float: right;
+    font-size: 10pt;
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;</p>
+
+<pre><code>background: $toc-bg;
+border: solid 1px #999999;
+margin: 0 0 10px 15px;
+
+.tocHeading {
+    font-weight: bold;
+    font-size: 125%;
+}
+
+#toc {
+    background: $toc-bg;
+    ul {
+        list-style: disc;
+        li {
+            margin-left: $toc-incr !important;
+            padding: 0 !important;
+        }
+    }
+}
+</code></pre>
+
+<p>}
+{% endraw %}</p>
+
+<pre><code>VII.保存下面内容为_print.scss放置于sass/custom/
+{% codeblock lang:css %}
+{% raw %}
+@import &quot;mixins&quot;;
+
+$toc-incr: 1em;
+
+div#tocBlock {
+    font-size: 10pt;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+
+    background: white !important;
+    border: solid 1px #999999;
+    margin: 0 0 10px 15px;
+
+    .tocHeading {
+        font-weight: bold;
+        font-size: 125%;
+    }
+
+    #toc {
+        background: white !important;
+        ul {
+            list-style: disc;
+            li {
+                margin-left: $toc-incr !important;
+                padding: 0 !important;
+            }
+        }
+    }
+}
+{% endraw %}
+</code></pre>
+
+<p>VIII.在sass/screen.scss里添加如下内容
+{% codeblock lang:css %}
+{% raw %}
+@import &ldquo;custom/screen&rdquo;;
+@import &ldquo;custom/print&rdquo;;
+{% endraw %}</p>
+
+<pre><code># 2.使用
+设置toc为true即可
+</code></pre>
+
+<p>layout: post
+title: &ldquo;Table of Contents in Octopress&rdquo;
+date: &ldquo;2012-12-27&rdquo;
+comments: true
+categories: Octopress
+toc: true
+```</p>
+
+<h1 id="3-reference">3.Reference</h1>
+
+<ul>
+<li><a href="http://brizzled.clapper.org/blog/2012/02/04/generating-a-table-of-contents-in-octopress/">Generating a Table of Contents in Octopress</a><br />
+Thanks!</li>
+</ul>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2012-12-27</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2012-12-28-expert-c-programming-reading-notes-one/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">《C专家编程》读书笔记(一)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2012-12-27-remote-copy-files/">
+            <span class="next-text nav-default">用scp远程拷贝文件</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

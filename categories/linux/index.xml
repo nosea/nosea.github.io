@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/linux/</link>
+    <description>Recent content in Linux on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux 实用工具 - Wget</title>
+      <link>http://localhost:1313/post/2012-12-30-linux-utilities-wget/</link>
+      <pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-30-linux-utilities-wget/</guid>
+      <description>Introduction wget的使用 使用 常用选项 # 断点续传 -c wget -c link # 递归下载整个目录 默认深度是5，想改变深度,用-l选项 wget -r linkdir 使用代理 http代理 1.配置文件方</description>
+    </item>
+    
+    <item>
+      <title>用scp远程拷贝文件</title>
+      <link>http://localhost:1313/post/2012-12-27-remote-copy-files/</link>
+      <pubDate>Thu, 27 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-27-remote-copy-files/</guid>
+      <description>假设远程主机已经安装了SSH服务器服务 本地主机 文件/目录 的位置 : localfile.txt 远程主机 : 192.168.0.1 远程主机上要存放的位置 : /home/username/ ====================================================== scp -r localfile.txt username@192.168.0.1:/home/username/ ====================================================== 将本地主机文件local</description>
+    </item>
+    
+    <item>
+      <title>frequently-used command</title>
+      <link>http://localhost:1313/post/2012-12-26-frequently-used-command/</link>
+      <pubDate>Wed, 26 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-26-frequently-used-command/</guid>
+      <description>1.kill process # killall - kill processes by name killall process_name # kill kill process_id kill -9 process_id # 配合查找进程命令使用 ps ax|grep keywords 2.前台和后台 # 暂停当前运行的程序 Ctrl + z # 查看被暂停的程序 jobs # 恢复到前台 fg [</description>
+    </item>
+    
+    <item>
+      <title>把Emacs添加到右键菜单</title>
+      <link>http://localhost:1313/post/2012-12-21-add-emacs-to-windows-right-click-menu/</link>
+      <pubDate>Fri, 21 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-21-add-emacs-to-windows-right-click-menu/</guid>
+      <description>1.打开regedit 2.HKEY_CLASSES_ROOT*\shell\下新建Edit with Emacs 3.在Edit with Emacs下新建command</description>
+    </item>
+    
+    <item>
+      <title>把本地项目放到Github</title>
+      <link>http://localhost:1313/post/2012-12-18-make-local-project-on-github/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-18-make-local-project-on-github/</guid>
+      <description>一.到Github新建一个repo，例如example-repo 二.到你的项目根目录 git init # 初始化 git add . # 跟踪所有文件 git commit -a # 提交 git remote add alias_name git@github.com:username/example-repo.git #</description>
+    </item>
+    
+    <item>
+      <title>git 学习笔记(一)</title>
+      <link>http://localhost:1313/post/2012-12-16-notes-of-git/</link>
+      <pubDate>Sun, 16 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-16-notes-of-git/</guid>
+      <description>一.理论 1.集中式版本控制系统(Centralized Version Control Systems, 简称CVCS) eg: CVS, Subversin, Perforce 由一个单一的集中管理的服务器，保存所有文件修订版本. 2.分</description>
+    </item>
+    
+    <item>
+      <title>Linux 实用工具 - scrot</title>
+      <link>http://localhost:1313/post/2012-12-11-linux-utilities-scrot/</link>
+      <pubDate>Tue, 11 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-11-linux-utilities-scrot/</guid>
+      <description>屏幕截图工具 一.安装 Ubuntu: sudo apt-get install scrot Fedora: yum install scrot #有点久没用了，一般情况是这样子 自己编译: 到这个网址下载&amp;ndash;&amp;gt;http://linux</description>
+    </item>
+    
+  </channel>
+</rss>

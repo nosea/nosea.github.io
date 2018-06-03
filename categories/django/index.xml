@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/django/</link>
+    <description>Recent content in Django on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django笔记 - 开始Django</title>
+      <link>http://localhost:1313/post/2012-12-18-notes-of-start-django/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-18-notes-of-start-django/</guid>
+      <description>一.到官网下载最新稳定版,关于哪个版本好, 官网右侧有说明，安装 Linux tar xzvf Django-1.4.3.tar.gz cd Django-1.4.3 sudo python setup.py install Windows If you&amp;rsquo;re using Windows, start a command shell with administrator privileges and run the command python setup.py install 安装好后，检查下 $ python</description>
+    </item>
+    
+    <item>
+      <title>Django笔记-视图和URL配置</title>
+      <link>http://localhost:1313/post/2012-12-18-views-and-urlconfs-of-django/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-18-views-and-urlconfs-of-django/</guid>
+      <description>一.基础知识 1.什么是视图(view) I.视图(函数)：接受一个Web请求并返回Web响应的Python函数。 该响应可以是一份网页的HTML</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/python/</link>
+    <description>Recent content in Python on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 31 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python编码规范</title>
+      <link>http://localhost:1313/post/2012-12-31-python-coding-rule/</link>
+      <pubDate>Mon, 31 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-31-python-coding-rule/</guid>
+      <description>Introduction 常用的python编码规范 内容 命名 1.模块名 - 不含下划线，简短的，全小写的名字 2.类名 - 首字母大写的单词串(eg - GetName) 3.全局变量名 - 同函数</description>
+    </item>
+    
+    <item>
+      <title>Python Error Log</title>
+      <link>http://localhost:1313/post/2012-12-24-python-error-log/</link>
+      <pubDate>Mon, 24 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-24-python-error-log/</guid>
+      <description>列表: 1.TypeError: &amp;lsquo;module&amp;rsquo; object is not callable 出现这种错误，说明忘记在某个地方加上模块名了 Python导入模块的方法有两种：import module 和 from module import， 区别是前者</description>
+    </item>
+    
+    <item>
+      <title>python基础(三章)</title>
+      <link>http://localhost:1313/post/2012-12-24-python-basic-three/</link>
+      <pubDate>Mon, 24 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-24-python-basic-three/</guid>
+      <description>说明: 1.目前只能实现一对一聊天 2.python的多重赋值: x = y = z = 1 2.python的&amp;rdquo;多元&amp;rdquo;赋值: x, y, z = 1,</description>
+    </item>
+    
+    <item>
+      <title>Python笔记-快览</title>
+      <link>http://localhost:1313/post/2012-12-18-python-getting-started/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-18-python-getting-started/</guid>
+      <description>1、变量的内容可以用print输出，也可以仅使用变量名查看该变量的原始值。 2、print语句调用str()函数显示对象，交互解释器用repr</description>
+    </item>
+    
+  </channel>
+</rss>

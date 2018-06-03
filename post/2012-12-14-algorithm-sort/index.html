@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>排序算法 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" />
+  <meta name="description" content="一.插入排序 1.直接插入排序 基本思路: 依次把待排序的的记录逐一按照关键字的大小插入到已经排好的有序序列中。 复杂度：O(n^2) 稳定的排序方法" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2012-12-14-algorithm-sort/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="排序算法" />
+<meta property="og:description" content="一.插入排序 1.直接插入排序 基本思路: 依次把待排序的的记录逐一按照关键字的大小插入到已经排好的有序序列中。 复杂度：O(n^2) 稳定的排序方法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2012-12-14-algorithm-sort/" />
+
+
+
+<meta property="article:published_time" content="2012-12-14T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-12-14T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="排序算法">
+<meta itemprop="description" content="一.插入排序 1.直接插入排序 基本思路: 依次把待排序的的记录逐一按照关键字的大小插入到已经排好的有序序列中。 复杂度：O(n^2) 稳定的排序方法">
+
+
+<meta itemprop="datePublished" content="2012-12-14T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2012-12-14T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1364">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="排序算法"/>
+<meta name="twitter:description" content="一.插入排序 1.直接插入排序 基本思路: 依次把待排序的的记录逐一按照关键字的大小插入到已经排好的有序序列中。 复杂度：O(n^2) 稳定的排序方法"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">排序算法</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-12-14 </span>
+        <div class="post-category">
+            
+              <a href="/categories/algorithm/"> Algorithm </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>一.插入排序<br />
+1.直接插入排序<br />
+    基本思路: 依次把待排序的的记录逐一按照关键字的大小插入到已经排好的有序序列中。<br />
+    复杂度：O(n^2)   稳定的排序方法.</p>
+
+<pre><code class="language-c">void insertion_sort(int a[], int n)
+{
+	int i;
+	for (i=1; i&lt;n; i++)
+	{
+		int key = a[i];
+		int j = i - 1;
+
+		while (key &lt; a[j])
+		{
+			a[j+1] = a[j];
+			j--;
+		}
+
+		a[j+1] = key;
+    }
+}
+</code></pre>
+
+<!-- more -->
+
+<p>2.希尔排序<br />
+    又称&rdquo;缩小增量排序&rdquo;，也是一种插入类排序算法。<br />
+    复杂度：O(n^1.3)  不稳定排序算法</p>
+
+<pre><code class="language-c">void shell_sort(int a[], int n)
+{
+	int i;
+	int d = n/2;
+	while (d &gt;= 1)
+	{
+		for (i=d+1; i&lt;n; i++)
+		{
+			int key = a[i];
+			int j = i - d;
+
+			while ((j&gt;0) &amp;&amp; (key&lt;a[j]))
+			{
+				a[j+d] = a[j];
+				j = j - d;
+			}
+
+			a[j+d] = key;
+		}
+
+		d = d / 2;
+	}
+}
+</code></pre>
+
+<p>二.交换排序<br />
+1.冒泡排序<br />
+    通过相邻之间的记录两两比较和交换。
+    复杂度：O(n^2)   稳定的排序算法</p>
+
+<pre><code class="language-c">void bubble_sort(int a[], int n)
+{
+	int i = n;
+	int j, temp;
+	while(i &gt; 1)
+	{
+		for (j=0; j&lt;i-1; j++)
+		{
+			if (a[j] &gt; a[j+1])
+			{
+				temp = a[j+1];
+				a[j+1] = a[j];
+				a[j] = temp;
+			}
+		}
+		i--;
+	}
+}
+</code></pre>
+
+<p>2.快速排序
+    对冒泡排序的一种改进. 复杂度：最坏情况 O(n^2)   不稳定的排序算法
+    所有比关键字小的记录均排在它之前，所有比关键字大的记录都排在它之后，完成一趟排序。
+    对剩余的两个部分递归.</p>
+
+<pre><code class="language-c">void quick_sort(int a[],int low,int high)
+{
+	if (low &gt;= high)
+		return ;
+	int j, i, key;
+	i=low;
+	j=high;
+	key=a[i];
+	while(i &lt; j)
+	{
+		while(i&lt;j &amp;&amp; a[j]&gt;key)
+			j--;
+		if (i&lt;j) 
+			a[i++] = a[j];
+		while (i&lt;j &amp;&amp; a[i]&lt;key)
+			i++;
+		if (i&lt;j) 
+			a[j--] = a[i];
+	}
+
+	a[i] = key;
+	if (low &lt; i-1)
+		quick_sort(a, low, i-1);
+	if (i+1&lt;high)
+		quick_sort(a, i+1, high);
+
+}
+</code></pre>
+
+<p>三.选择排序
+    指每次从待排序的记录中选择关键字值最小的(或最大的)记录，顺序放在已排序的的子序列.
+1.简单选择排序
+    复杂度：O(n^2)   不稳定排序</p>
+
+<pre><code class="language-c">/*
+ * 算法思路：
+ * (1)：查找待排序序列中最小的记录，并将它和该区间第一个记录交换。
+ * (2)：重复步骤(1)直到第n-1次排序后结束。
+ */
+void select_sort(int a[], int n)
+{
+	int i, j, min, k;
+
+	for (i=0; i&lt;n-1; i++)
+	{
+		k = i;
+		min = a[i];
+		for (j=i+1; j&lt;n; j++)
+		{
+			if (a[j] &lt; min)
+			{
+				min = a[j];
+				k = j;
+			}
+		}
+
+		a[k] = a[i];
+		a[i] = min;
+	}
+}
+</code></pre>
+
+<p>2.堆排序<br />
+    复杂度：O(nlog2n)    不稳定的排序方法</p>
+
+<pre><code class="language-c">/* 参考---&gt;   http://zh.wikipedia.org/wiki/%E5%A0%86%E6%8E%92%E5%BA%8F */ 
+/*
+ * 堆排序算法对于记录数较少的文件来说，其优越性并不明显，但对记录数
+ * 较大的文件还是很有效的。它的运行时间主要耗费在建初始堆和调整新建
+ * 堆时进行的反复“筛选”上。堆排序只需要一个记录大小的辅助空间，对排序
+ * 的时间复杂度为O(nlog2n)，堆排序是一种不稳定的排序方法。
+ */
+/*
+ * 堆在完全二叉树中的解释为：完全二叉树中的任一分支节点的关键字都不大于
+ * (或不小于)其左右孩子的值，所以堆顶元素(或完全二叉树的根)K1必为序列中
+ * n个元素的最小值(最大值)。
+ *
+ * 堆排序的基本思路：对一组待排序的记录序列，先将其关键字按堆的定义排列
+ * 一个序列(称初建堆)，找到最小(最大)关键字后，将其取出。用剩余的n-1个元
+ * 素再重建堆，便可得到次小(次大)值。如此反复，直到全部关键字排好序为止。
+ */
+
+/*筛选算法*/
+void sift(int d[], int ind, int len)
+{
+	/*置i为要筛选的节点*/
+	int i = ind;
+
+
+	/*+1的目的就是为了解决节点从0开始而他的左孩子一直为0的问题*/
+	int c = i * 2 + 1; /*c中保存i节点的左孩子*/
+
+	while(c &lt; len)/*未筛选到叶子节点*/
+	{
+		/*如果要筛选的节点既有左孩子又有右孩子并且左孩子值小于右孩子*/
+		/*从二者中选出较大的并记录*/
+		if(c + 1 &lt; len &amp;&amp; d[c] &lt; d[c + 1])
+			c++;
+		/*如果要筛选的节点中的值大于左右孩子的较大者则退出*/
+		if(d[i] &gt; d[c])
+			break;
+		else
+		{
+			/*交换*/
+			int t = d[c];
+			d[c] = d[i];
+			d[i] = t;
+			/*重置要筛选的节点和要筛选的左孩子*/
+			i = c;
+			c = 2 * i + 1;
+		}
+	}
+
+	return;
+}
+
+void heap_sort(int d[], int n)
+{
+	int i;
+	/*初始化建堆, i从最后一个非叶子节点开始*/
+	for(i = n / 2; i &gt;= 0; i--)
+		sift(d, i, n);
+
+	for(i = 0; i &lt; n; i++)
+	{
+		/* 交换 */
+		int t = d[0];
+		d[0] = d[n - i - 1];
+		d[n - i - 1] = t;
+
+		/* 筛选编号为0 */
+		sift(d, 0, n - i - 1);
+
+	}
+}
+</code></pre>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2012-12-14</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2012-12-14-activity-lifecycle/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Activity 生命周期</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2012-12-12-user-interface-of-android/">
+            <span class="next-text nav-default">Android的用户界面</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

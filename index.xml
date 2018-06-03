@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 31 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python编码规范</title>
+      <link>http://localhost:1313/post/2012-12-31-python-coding-rule/</link>
+      <pubDate>Mon, 31 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-31-python-coding-rule/</guid>
+      <description>Introduction 常用的python编码规范 内容 命名 1.模块名 - 不含下划线，简短的，全小写的名字 2.类名 - 首字母大写的单词串(eg - GetName) 3.全局变量名 - 同函数</description>
+    </item>
+    
+    <item>
+      <title>Linux 实用工具 - Wget</title>
+      <link>http://localhost:1313/post/2012-12-30-linux-utilities-wget/</link>
+      <pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-30-linux-utilities-wget/</guid>
+      <description>Introduction wget的使用 使用 常用选项 # 断点续传 -c wget -c link # 递归下载整个目录 默认深度是5，想改变深度,用-l选项 wget -r linkdir 使用代理 http代理 1.配置文件方</description>
+    </item>
+    
+    <item>
+      <title>shell basic</title>
+      <link>http://localhost:1313/post/2012-12-29-shell-basic/</link>
+      <pubDate>Sat, 29 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-29-shell-basic/</guid>
+      <description>Introduction 记录一些基本的shell编程知识 1 基本概念 1.1 shell命令的执行 * 登录系统后，我们会取得一个交互的shell，称为login shell 或 primary shel</description>
+    </item>
+    
+    <item>
+      <title>shell for loop</title>
+      <link>http://localhost:1313/post/2012-12-29-shell-for-loop/</link>
+      <pubDate>Sat, 29 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-29-shell-for-loop/</guid>
+      <description>Introduction shell for 循环详解 #!/bin/bash #example of &#39;for&#39; # 相对与while和until的循环方式，for循环则是适用于循环次数已经知道 # 的情况 # bash for 循环总的来说有两种方式，一</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu Error Log</title>
+      <link>http://localhost:1313/post/2012-12-28-ubuntu-error-log/</link>
+      <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-28-ubuntu-error-log/</guid>
+      <description>error list 1. E: Unable to locate package xxxxxx # version: 12.04 # lang: en sudo apt-get install phpmyadmin Reading package lists... Done Building dependency tree Reading state information... Done E: Unable to locate package phpmyadmin 分析: 1.如果修改了source.list还没有update，请up</description>
+    </item>
+    
+    <item>
+      <title>《C专家编程》读书笔记(一)</title>
+      <link>http://localhost:1313/post/2012-12-28-expert-c-programming-reading-notes-one/</link>
+      <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-28-expert-c-programming-reading-notes-one/</guid>
+      <description>第1章 1.1 C语言的史前阶段 1.C 语言的产生源自于一个失败的项目-Multics工程.(一个巨大的操作系统) 2.Ken Thompson和Dennis Ritc</description>
+    </item>
+    
+    <item>
+      <title>Table of Contents in Octopress</title>
+      <link>http://localhost:1313/post/2012-12-27-table-of-contents-in-octopress/</link>
+      <pubDate>Thu, 27 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-27-table-of-contents-in-octopress/</guid>
+      <description>1.安装jQuery 1.1 下载 {% codeblock %} wget -c http://code.jquery.com/jquery-1.8.3.min.js wget -c http://fuelyourcoding.com/scripts/toc/jquery.toc.zip &amp;lt;!-- more --&amp;gt; ## 1.2 安装 I.将jquery-1.8.3.min.js放置于source/javascrip</description>
+    </item>
+    
+    <item>
+      <title>用scp远程拷贝文件</title>
+      <link>http://localhost:1313/post/2012-12-27-remote-copy-files/</link>
+      <pubDate>Thu, 27 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-27-remote-copy-files/</guid>
+      <description>假设远程主机已经安装了SSH服务器服务 本地主机 文件/目录 的位置 : localfile.txt 远程主机 : 192.168.0.1 远程主机上要存放的位置 : /home/username/ ====================================================== scp -r localfile.txt username@192.168.0.1:/home/username/ ====================================================== 将本地主机文件local</description>
+    </item>
+    
+    <item>
+      <title>frequently-used command</title>
+      <link>http://localhost:1313/post/2012-12-26-frequently-used-command/</link>
+      <pubDate>Wed, 26 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-26-frequently-used-command/</guid>
+      <description>1.kill process # killall - kill processes by name killall process_name # kill kill process_id kill -9 process_id # 配合查找进程命令使用 ps ax|grep keywords 2.前台和后台 # 暂停当前运行的程序 Ctrl + z # 查看被暂停的程序 jobs # 恢复到前台 fg [</description>
+    </item>
+    
+    <item>
+      <title>在ubuntu上安装kvm</title>
+      <link>http://localhost:1313/post/2012-12-26-install-kvm-on-ubuntu/</link>
+      <pubDate>Wed, 26 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-26-install-kvm-on-ubuntu/</guid>
+      <description>Install Necessary Packages sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils Add Users to Groups sudo adduser `id -un` libvirtd Verify Installation virsh -c qemu:///system list Install virt-manager (graphical user interface) sudo apt-get install virt-manager Creating virtual machines #!/bin/bash set -x sudo virt-install \ --connect qemu:///system \ --name ubuntu \ --ram 1024 \ --disk path=/var/lib/libvirt/images/ubuntu.img,size=15 \ --network network:default \ --cdrom=/path-to-iso-file/ubuntu-12.04-desktop-i386.iso \ --os-variant=ubuntuprecise \ --accelerate Cloning a virtual machine virt-clone -o ubuntu</description>
+    </item>
+    
+    <item>
+      <title>Python Error Log</title>
+      <link>http://localhost:1313/post/2012-12-24-python-error-log/</link>
+      <pubDate>Mon, 24 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-24-python-error-log/</guid>
+      <description>列表: 1.TypeError: &amp;lsquo;module&amp;rsquo; object is not callable 出现这种错误，说明忘记在某个地方加上模块名了 Python导入模块的方法有两种：import module 和 from module import， 区别是前者</description>
+    </item>
+    
+    <item>
+      <title>python基础(三章)</title>
+      <link>http://localhost:1313/post/2012-12-24-python-basic-three/</link>
+      <pubDate>Mon, 24 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-24-python-basic-three/</guid>
+      <description>说明: 1.目前只能实现一对一聊天 2.python的多重赋值: x = y = z = 1 2.python的&amp;rdquo;多元&amp;rdquo;赋值: x, y, z = 1,</description>
+    </item>
+    
+    <item>
+      <title>把Emacs添加到右键菜单</title>
+      <link>http://localhost:1313/post/2012-12-21-add-emacs-to-windows-right-click-menu/</link>
+      <pubDate>Fri, 21 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-21-add-emacs-to-windows-right-click-menu/</guid>
+      <description>1.打开regedit 2.HKEY_CLASSES_ROOT*\shell\下新建Edit with Emacs 3.在Edit with Emacs下新建command</description>
+    </item>
+    
+    <item>
+      <title>Android的布局</title>
+      <link>http://localhost:1313/post/2012-12-19-android-layout/</link>
+      <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-19-android-layout/</guid>
+      <description>一.关于一些属性 android:id - 为控件指定id android:text - 指定控件中显示的文字，这里尽量用string.xml android:gravity - 指定控件中的内容的基本位置，比如居中，居右 android:textSize -</description>
+    </item>
+    
+    <item>
+      <title>Django笔记 - 开始Django</title>
+      <link>http://localhost:1313/post/2012-12-18-notes-of-start-django/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-18-notes-of-start-django/</guid>
+      <description>一.到官网下载最新稳定版,关于哪个版本好, 官网右侧有说明，安装 Linux tar xzvf Django-1.4.3.tar.gz cd Django-1.4.3 sudo python setup.py install Windows If you&amp;rsquo;re using Windows, start a command shell with administrator privileges and run the command python setup.py install 安装好后，检查下 $ python</description>
+    </item>
+    
+    <item>
+      <title>Django笔记-视图和URL配置</title>
+      <link>http://localhost:1313/post/2012-12-18-views-and-urlconfs-of-django/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-18-views-and-urlconfs-of-django/</guid>
+      <description>一.基础知识 1.什么是视图(view) I.视图(函数)：接受一个Web请求并返回Web响应的Python函数。 该响应可以是一份网页的HTML</description>
+    </item>
+    
+    <item>
+      <title>Python笔记-快览</title>
+      <link>http://localhost:1313/post/2012-12-18-python-getting-started/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-18-python-getting-started/</guid>
+      <description>1、变量的内容可以用print输出，也可以仅使用变量名查看该变量的原始值。 2、print语句调用str()函数显示对象，交互解释器用repr</description>
+    </item>
+    
+    <item>
+      <title>把本地项目放到Github</title>
+      <link>http://localhost:1313/post/2012-12-18-make-local-project-on-github/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-18-make-local-project-on-github/</guid>
+      <description>一.到Github新建一个repo，例如example-repo 二.到你的项目根目录 git init # 初始化 git add . # 跟踪所有文件 git commit -a # 提交 git remote add alias_name git@github.com:username/example-repo.git #</description>
+    </item>
+    
+    <item>
+      <title>Activity的切换</title>
+      <link>http://localhost:1313/post/2012-12-16-switch-to-another-activity/</link>
+      <pubDate>Sun, 16 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-16-switch-to-another-activity/</guid>
+      <description>一.同个Activity的view 1.添加view在布局文件中添加，一般注意宽高属性 layout_width, layout_height 有fill_parent，wrap_content，</description>
+    </item>
+    
+    <item>
+      <title>git 学习笔记(一)</title>
+      <link>http://localhost:1313/post/2012-12-16-notes-of-git/</link>
+      <pubDate>Sun, 16 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-16-notes-of-git/</guid>
+      <description>一.理论 1.集中式版本控制系统(Centralized Version Control Systems, 简称CVCS) eg: CVS, Subversin, Perforce 由一个单一的集中管理的服务器，保存所有文件修订版本. 2.分</description>
+    </item>
+    
+    <item>
+      <title>写给自己</title>
+      <link>http://localhost:1313/post/2012-12-16-say-to-myself/</link>
+      <pubDate>Sun, 16 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-16-say-to-myself/</guid>
+      <description>只此一文 1.无论何时、何地，你的生活如何，别忘记你的梦想！ 2.守本分 3.少评论，少抱怨 4.别试图改变他人，你唯一可以改变的人只有你自己 5.别</description>
+    </item>
+    
+    <item>
+      <title>Activity 生命周期</title>
+      <link>http://localhost:1313/post/2012-12-14-activity-lifecycle/</link>
+      <pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-14-activity-lifecycle/</guid>
+      <description>一.基本生命周期 {% img /image_tag/basic-lifecycle.png %} 关于各种状态的说明 Resumed In this state, the activity is in the foreground and the user can interact with it. (Also sometimes referred to as the &amp;ldquo;running&amp;rdquo; state.) Paused In this state, the activity is partially obscured by another activity—the other</description>
+    </item>
+    
+    <item>
+      <title>排序算法</title>
+      <link>http://localhost:1313/post/2012-12-14-algorithm-sort/</link>
+      <pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-14-algorithm-sort/</guid>
+      <description>一.插入排序 1.直接插入排序 基本思路: 依次把待排序的的记录逐一按照关键字的大小插入到已经排好的有序序列中。 复杂度：O(n^2) 稳定的排序方法</description>
+    </item>
+    
+    <item>
+      <title>Android的用户界面</title>
+      <link>http://localhost:1313/post/2012-12-12-user-interface-of-android/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-12-user-interface-of-android/</guid>
+      <description>一.概览 The graphical user interface for an Android app is built using a hierarchy of View and ViewGroup objects. View objects are usually UI widgets such as buttons or text fields and ViewGroup objects are invisible view containers that define how the child views are laid out, such as in a grid or a vertical list. All user interface elements in an Android app are built using</description>
+    </item>
+    
+    <item>
+      <title>Android的一些基本概念</title>
+      <link>http://localhost:1313/post/2012-12-11-basic-knowledge-of-android/</link>
+      <pubDate>Tue, 11 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-11-basic-knowledge-of-android/</guid>
+      <description>一.Android的体系架构 from: App Framework {% img /image_tag/system-architecture.jpg %} 二.四个很重要的组件 1.Activity 可以看成容器，构造应用程序界面，里面可以放置各种控件。 2.Intent 在Activity之</description>
+    </item>
+    
+    <item>
+      <title>Linux 实用工具 - scrot</title>
+      <link>http://localhost:1313/post/2012-12-11-linux-utilities-scrot/</link>
+      <pubDate>Tue, 11 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-11-linux-utilities-scrot/</guid>
+      <description>屏幕截图工具 一.安装 Ubuntu: sudo apt-get install scrot Fedora: yum install scrot #有点久没用了，一般情况是这样子 自己编译: 到这个网址下载&amp;ndash;&amp;gt;http://linux</description>
+    </item>
+    
+    <item>
+      <title>在Linux和Windows下同步Octopress</title>
+      <link>http://localhost:1313/post/2012-12-11-sync-octopress-between-linux-and-windows/</link>
+      <pubDate>Tue, 11 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-11-sync-octopress-between-linux-and-windows/</guid>
+      <description>一.需求 需要在Win7和Ubuntu下写东西，因此需要实时更新。 二.按照前面的在Windows下搭建Octopress的步骤。唯一不同的是:</description>
+    </item>
+    
+    <item>
+      <title>在win7上搭建Android开发环境</title>
+      <link>http://localhost:1313/post/2012-12-10-setup-android-development-environment-on-windows-7/</link>
+      <pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-10-setup-android-development-environment-on-windows-7/</guid>
+      <description>一.System Requirements, 来自官方文档 *Eclipse IDE *Eclipse 3.6.2 (Helios) or greater *Note: Eclipse 3.5 (Galileo) is no longer supported with the latest version of ADT. *Eclipse JDT plugin (included in most Eclipse IDE packages) *JDK 6 (JRE alone is not sufficient) *Android Development Tools plugin (recommended) *Not compatible with GNU Compiler for Java (gcj) 二.安装J</description>
+    </item>
+    
+    <item>
+      <title>配置 Octopress</title>
+      <link>http://localhost:1313/post/2012-12-10-configure-octopress/</link>
+      <pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-10-configure-octopress/</guid>
+      <description>一.给Octopress添加评论 1.到DISQUS:http://disqus.com/ 注册一个账号，并且把你的博客地址添加到DISQUS.</description>
+    </item>
+    
+    <item>
+      <title>install octopress on windows</title>
+      <link>http://localhost:1313/post/2012-12-08-install-octopress-on-windows/</link>
+      <pubDate>Sat, 08 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-08-install-octopress-on-windows/</guid>
+      <description>Environment:
+OS: Windows 7 SP1
+Lang: en
+ Install software
+ Install git
+ Get the latest msysgit and install.
+  Install ruby for windows -1.9.2 or 1.9.3
+ Get RubyInstaller and install.
+Add the bin path to the System environment&amp;rsquo;s path where ruby installed
+eg: C:\Ruby192\bin
+ Get RubyInstaller DevKit
+It is a self-extracting file and extract it in a place, such as C:\DevKit
+run the CMD, enter the C:\DevKit</description>
+    </item>
+    
+    <item>
+      <title>在Github上搭建Octopress</title>
+      <link>http://localhost:1313/post/2012-12-05-deploy-octopress-on-github/</link>
+      <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-05-deploy-octopress-on-github/</guid>
+      <description>参考：http://octopress.org/docs/ 1. install git sudo apt-get install git 2. install libyaml wget -c http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz tar xvf yaml-0.1.4.tar.gz cd yaml* sudo ./configure sudo make sudo make install 3. install ruby wget -c http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p327.tar.gz tar xvf ruby-1.9.3-p327.tar.gz cd ruby* sudo ./configure sudo make sudo</description>
+    </item>
+    
+  </channel>
+</rss>

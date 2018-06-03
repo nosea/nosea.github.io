@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/shell/</link>
+    <description>Recent content in Shell on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 29 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>shell basic</title>
+      <link>http://localhost:1313/post/2012-12-29-shell-basic/</link>
+      <pubDate>Sat, 29 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-29-shell-basic/</guid>
+      <description>Introduction 记录一些基本的shell编程知识 1 基本概念 1.1 shell命令的执行 * 登录系统后，我们会取得一个交互的shell，称为login shell 或 primary shel</description>
+    </item>
+    
+    <item>
+      <title>shell for loop</title>
+      <link>http://localhost:1313/post/2012-12-29-shell-for-loop/</link>
+      <pubDate>Sat, 29 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-29-shell-for-loop/</guid>
+      <description>Introduction shell for 循环详解 #!/bin/bash #example of &#39;for&#39; # 相对与while和until的循环方式，for循环则是适用于循环次数已经知道 # 的情况 # bash for 循环总的来说有两种方式，一</description>
+    </item>
+    
+  </channel>
+</rss>

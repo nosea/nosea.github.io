@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CC&#43;&#43; on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/cc&#43;&#43;/</link>
+    <description>Recent content in CC&#43;&#43; on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/cc++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《C专家编程》读书笔记(一)</title>
+      <link>http://localhost:1313/post/2012-12-28-expert-c-programming-reading-notes-one/</link>
+      <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/2012-12-28-expert-c-programming-reading-notes-one/</guid>
+      <description>第1章 1.1 C语言的史前阶段 1.C 语言的产生源自于一个失败的项目-Multics工程.(一个巨大的操作系统) 2.Ken Thompson和Dennis Ritc</description>
+    </item>
+    
+  </channel>
+</rss>

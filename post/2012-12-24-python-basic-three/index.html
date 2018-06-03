@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python基础(三章) - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" />
+  <meta name="description" content="说明: 1.目前只能实现一对一聊天 2.python的多重赋值: x = y = z = 1 2.python的&amp;rdquo;多元&amp;rdquo;赋值: x, y, z = 1," />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2012-12-24-python-basic-three/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="python基础(三章)" />
+<meta property="og:description" content="说明: 1.目前只能实现一对一聊天 2.python的多重赋值: x = y = z = 1 2.python的&rdquo;多元&rdquo;赋值: x, y, z = 1," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2012-12-24-python-basic-three/" />
+
+
+
+<meta property="article:published_time" content="2012-12-24T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2012-12-24T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="python基础(三章)">
+<meta itemprop="description" content="说明: 1.目前只能实现一对一聊天 2.python的多重赋值: x = y = z = 1 2.python的&rdquo;多元&rdquo;赋值: x, y, z = 1,">
+
+
+<meta itemprop="datePublished" content="2012-12-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2012-12-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1188">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python基础(三章)"/>
+<meta name="twitter:description" content="说明: 1.目前只能实现一对一聊天 2.python的多重赋值: x = y = z = 1 2.python的&rdquo;多元&rdquo;赋值: x, y, z = 1,"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python基础(三章)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-12-24 </span>
+        <div class="post-category">
+            
+              <a href="/categories/python/"> Python </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#coding-utf-8">coding:utf-8</a></li>
+<li><a href="#author-nosea-shawn">Author: Nosea Shawn</a></li>
+<li><a href="#date-mon-dec-24-13-18-52-cst-2012">Date: Mon Dec 24 13:18:52 CST 2012</a></li>
+<li><a href="#version-0-001">Version: 0.001</a></li>
+<li><a href="#describe-用一个聊天程序来总结一下第三章">Describe: 用一个聊天程序来总结一下第三章</a></li>
+<li><a href="#模块名应该是不包含下划线-简短的-小写的名字">模块名应该是不包含下划线，简短的，小写的名字</a></li>
+<li><a href="#模块的文档字符串">模块的文档字符串</a></li>
+<li><a href="#导入模块">导入模块</a></li>
+<li><a href="#全局变量定义-除非必须-否则应尽量用局部变量代替全局变量">全局变量定义，除非必须，否则应尽量用局部变量代替全局变量</a></li>
+<li><a href="#不希望被from-m-import-来使用的全局变量-函数和类在前面加">不希望被from M import * 来使用的全局变量，函数和类在前面加“_”</a></li>
+<li><a href="#类定义-类名总是应该首字母大写的单词串">类定义 - 类名总是应该首字母大写的单词串</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>说明:
+    1.目前只能实现一对一聊天
+    2.python的多重赋值: x = y = z = 1
+    2.python的&rdquo;多元&rdquo;赋值: x, y, z = 1, 2, &lsquo;some&rsquo; #为了可读性，加小括号
+    3.不同于c语言，表达式不返回值：eg, y = (x=z+1) -&gt;这句错误
+    4.专用下划线标识符：
+      _xxx    不用&rsquo;from module import *&rsquo; 导入
+      <em>xxx</em>   系统定义名字
+      _xxx    类中的私有变量名</p>
+
+<!-- more -->
+
+<p>``` python server.py
+#! /usr/bin/env python</p>
+
+<h1 id="coding-utf-8">coding:utf-8</h1>
+
+<h1 id="author-nosea-shawn">Author: Nosea Shawn</h1>
+
+<h1 id="date-mon-dec-24-13-18-52-cst-2012">Date: Mon Dec 24 13:18:52 CST 2012</h1>
+
+<h1 id="version-0-001">Version: 0.001</h1>
+
+<h1 id="describe-用一个聊天程序来总结一下第三章">Describe: 用一个聊天程序来总结一下第三章</h1>
+
+<p>#</p>
+
+<h1 id="模块名应该是不包含下划线-简短的-小写的名字">模块名应该是不包含下划线，简短的，小写的名字</h1>
+
+<h1 id="模块的文档字符串">模块的文档字符串</h1>
+
+<p>&rdquo;&ldquo;&ldquo;这个是服务模块的文档字符串&rdquo;&ldquo;&rdquo;</p>
+
+<h1 id="导入模块">导入模块</h1>
+
+<p>import socket
+from time import ctime
+import sys</p>
+
+<h1 id="全局变量定义-除非必须-否则应尽量用局部变量代替全局变量">全局变量定义，除非必须，否则应尽量用局部变量代替全局变量</h1>
+
+<h1 id="不希望被from-m-import-来使用的全局变量-函数和类在前面加">不希望被from M import * 来使用的全局变量，函数和类在前面加“_”</h1>
+
+<p>_DEBUG = True<br />
+_PORT = 21567
+_BUFSIZ = 1024
+_LISTEN_NUM = 1</p>
+
+<h1 id="类定义-类名总是应该首字母大写的单词串">类定义 - 类名总是应该首字母大写的单词串</h1>
+
+<p>class DemoServer:
+    &ldquo;&rdquo;&ldquo;这个服务部分类的文档字符串，跨行写一般用反斜线&rsquo;\&lsquo;，但在
+    使用闭合操作符时，单一语句可以跨多行，比如小括号，花括号，中
+    括号，还有就是这里的三引号&rdquo;&ldquo;&rdquo;
+    def <strong>init</strong>(self, port):
+        &ldquo;&rdquo;&ldquo;初始化&rdquo;&ldquo;&rdquo;
+        self.host = &ldquo;
+        self.port = port</p>
+
+<pre><code># 函数名和变量名一样，全部小写，多个单词以下划线分隔
+def start_server(self):  
+    &quot;&quot;&quot;开启服务&quot;&quot;&quot;
+    try:
+        self.srv_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # 防止出现socket.error: [Errno 98] Address already in use
+        self.srv_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    except socket.error, msg:
+        self.srv_sock = None
+        if _DEBUG:
+            print msg
+
+    try:    
+        self.srv_sock.bind((self.host, self.port))
+        self.srv_sock.listen(_LISTEN_NUM)
+    except socket.error, msg:
+        self.srv_sock.close()
+        self.srv_sock = None
+        if _DEBUG:
+            print msg
+
+    if self.srv_sock is None:
+        print 'could not open socket.'
+        sys.exit(1)
+
+def run_server(self):
+    &quot;&quot;&quot;等待连接&quot;&quot;&quot;
+    while True:
+        print 'waiting for connection...'
+        cli_sock, addr = self.srv_sock.accept()
+        print '...connected from:', addr
+        print &quot;=&quot; * 50
+
+        while True:
+            recv_data = cli_sock.recv(_BUFSIZ)
+            if not recv_data:
+                break
+            print '%s: %s' % (addr[0], recv_data)
+            send_data = raw_input('You: ')
+            cli_sock.send('%s: %s' % (ctime(), send_data))
+
+    self.srv_sock.close()
+</code></pre>
+
+<p>if <strong>name</strong> == &ldquo;<strong>main</strong>&ldquo;:
+    srv = DemoServer(_PORT)
+    srv.start_server()
+    srv.run_server()</p>
+
+<pre><code>
+```python client.py
+#! /usr/bin/env python
+# coding:utf-8
+# Author: Nosea Shawn
+# Date: Mon Dec 24 13:18:52 CST 2012
+# Version: 0.001
+# 
+# Describe: 用一个聊天程序来总结一下第三章
+#
+# 模块名应该是不包含下划线，简短的，小写的名字
+
+# 模块的文档字符串
+&quot;&quot;&quot;这个是client模块的文档字符串&quot;&quot;&quot;      
+
+import socket
+
+_DEBUG = True
+HOST = '127.0.0.1'
+PORT = 21567
+BUFSIZ = 1024
+ADDR = (HOST, PORT)
+
+
+class DemoClient:
+    &quot;&quot;&quot;用户类&quot;&quot;&quot;
+    def __init__(self, host, port):
+        &quot;&quot;&quot;初始化&quot;&quot;&quot;
+        self.host = host
+        self.port = port
+
+    def con_srv(self):
+        &quot;&quot;&quot;连接服务器&quot;&quot;&quot;
+        try:
+            self.cli_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        except socket.error, msg:
+            self.cli_sock = None
+            if _DEBUG:
+                print msg
+            
+        try:
+            self.cli_sock.connect((self.host, self.port))
+        except socket.error, msg:
+            self.cli_sock.close()
+            self.cli_sock = None
+            if _DEBUG:
+                print msg
+            
+        if self.cli_sock is None:
+            print 'could not open socket'
+            sys.exit(1)
+
+    def run(self):
+        &quot;&quot;&quot;与服务器通信&quot;&quot;&quot;
+        while True:
+            send_data = raw_input('You:')    
+            if not send_data:
+                break
+            self.cli_sock.send(send_data)
+            recv_data = self.cli_sock.recv(BUFSIZ)
+            if not recv_data:
+                break
+            print 'Server: %s' % recv_data
+
+        self.cli_sock.close()
+
+
+if __name__ == &quot;__main__&quot;:
+    client = DemoClient(HOST, PORT)
+    client.con_srv()
+    client.run()
+</code></pre>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2012-12-24</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2012-12-24-python-error-log/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python Error Log</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/2012-12-21-add-emacs-to-windows-right-click-menu/">
+            <span class="next-text nav-default">把Emacs添加到右键菜单</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
